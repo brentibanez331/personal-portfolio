@@ -4,10 +4,10 @@ export default function Hero() {
     return (
         <div className="mx-60 my-24 relative z-20">
             <div className="flex">
-                <div className="container rounded-xl size-52 mr-10">
-                    <Image src="/brent.jpg" width={300} height={300} className="rounded-lg" alt="Brent Ibañez" />
+                <div className="rounded-xl size-52 mr-10 w-60">
+                    <Image src="/brent.jpg" width={700} height={700} className="rounded-lg" alt="Brent Ibañez" />
                 </div>
-                <div className="flex flex-col justify-start max-w-3xl">
+                <div className="flex flex-col justify-start w-4/5">
                     <div>
                         <h1 className="text-2xl">Hello, I am</h1>
                         <h1 className="text-6xl font-bold mb-5">Brent Ibañez</h1>

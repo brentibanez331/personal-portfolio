@@ -33,9 +33,8 @@ export default function Home() {
     <main>
       {(isLoading || isLoaderFading) && (
         <div
-          className={`bg-black fixed inset-0 z-50 items-center flex transition-opacity duration-300 ${
-            isLoaderFading ? 'opacity-0' : 'opacity-100'
-          }`}
+          className={`bg-black fixed inset-0 z-50 items-center flex transition-opacity duration-300 ${isLoaderFading ? 'opacity-0' : 'opacity-100'
+            }`}
         >
           <div className="loader mx-auto">
             <div className="box"></div>
