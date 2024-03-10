@@ -5,6 +5,7 @@ import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import Featured from "./components/featured";
 import AllProjects from "./components/allprojects";
+import AIMLProjects from "./components/aiml";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -60,6 +61,7 @@ export default function Home() {
       <Navbar></Navbar>
       <Hero></Hero>
       <Featured></Featured>
+      <AIMLProjects></AIMLProjects>
       <AllProjects></AllProjects>
     </main>
   );
