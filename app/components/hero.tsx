@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Hero() {
     return (
-        <div className="mx-3.5 sm:mx-10 my-24 relative z-20">
+        <div className="mx-3.5 sm:mx-10 my-24 relative z-20 lg:mx-24">
             <div className="flex flex-col items-center sm:flex-row sm:justify-between">
                 <Image src="/brent.jpg" width={700} height={700} className="rounded-md sm:rounded-xl w-44 h-44 mb-3.5 sm:mb-0 sm:mr-5 md:size-52 md:mr-10" alt="Brent Ibañez" />
                 <div className="flex flex-col justify-center items-center sm:items-start sm:justify-start w-4/5">

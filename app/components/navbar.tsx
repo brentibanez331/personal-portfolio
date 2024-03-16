@@ -46,7 +46,7 @@ export default function Navbar() {
     }, [updateScrollTrigger]);
 
     return (
-        <div ref={navbarRef} className="mx-7 sticky top-5 sm:mx-10 my-5 flex items-center justify-between z-40">
+        <div ref={navbarRef} className="mx-7 sticky top-5 sm:mx-10 my-5 flex items-center justify-between z-40 lg:mx-24">
             <div className="flex items-center">
                 <Image src="/bi-logo-resized.png" width={23.6} height={50} alt="logo image" className="mr-2" />
                 <h2 className="text-3xl font-semibold" style={{ fontFamily: playfair.style.fontFamily }}>

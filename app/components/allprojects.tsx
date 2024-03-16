@@ -7,13 +7,13 @@ import Image from "next/image";
 
 export default function AllProjects() {
     return (
-        <div className="mx-7 sm:mx-10 mt-36 mb-14 relative z-20">
+        <div className="mx-7 sm:mx-10 mt-36 mb-14 relative z-20 lg:mx-24">
             <h1 className="text-3xl sm:text-4xl font-semibold">Other Works</h1>
             {/* <div className="flex justify-between mt-14"> */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5 mt-14">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5 mt-10 md:mt-14">
                 {/* SmileIT Inc. */}
                 <a href="https://github.com/brentibanez331/PCTC_202" target="_blank" className="masonry-item">
-                    <div className="bg-neutral-950 sm:h-52 rounded-md overflow-hidden flex flex-col justify-between relative transition duration-300 hover:scale-105 w-full">
+                    <div className="bg-[#0E0E10] sm:h-52 rounded-md overflow-hidden flex flex-col justify-between relative transition duration-300 hover:scale-105 w-full">
                         <div className="top-0 left-0 w-full">
                             <Image src="/projects/pctc.png" width={500} height={500} alt="SmileIT" className="hidden h-32 object-cover" />
                             <div className="p-6">
@@ -30,7 +30,7 @@ export default function AllProjects() {
                     </div>
                 </a>
                 <a href="https://github.com/Gianheybo/smileit" target="_blank" className="masonry-item">
-                    <div className="bg-neutral-950 sm:h-52 rounded-md overflow-hidden flex flex-col justify-between relative transition duration-300 hover:scale-105 w-full">
+                    <div className="bg-[#0E0E10] sm:h-52 rounded-md overflow-hidden flex flex-col justify-between relative transition duration-300 hover:scale-105 w-full">
                         <div className="top-0 left-0 w-full">
                             <Image src="/projects/smileit.png" width={500} height={500} alt="SmileIT" className="hidden h-32 object-cover" />
                             <div className="p-6">
@@ -47,7 +47,7 @@ export default function AllProjects() {
                 </a>
                 {/* Treasure Tide */}
                 <a href="https://github.com/brentibanez331/boat-game-fixed" target="_blank" className="masonry-item">
-                    <div className="bg-neutral-950 sm:h-52 rounded-md overflow-hidden flex flex-col justify-between relative transition duration-300 hover:scale-105 w-full">
+                    <div className="bg-[#0E0E10] sm:h-52 rounded-md overflow-hidden flex flex-col justify-between relative transition duration-300 hover:scale-105 w-full">
                         <div className="top-0 left-0 w-full">
                             <Image src="/projects/treasuretide.png" width={500} height={500} alt="Treasure Tide" className="hidden h-32 object-cover" />
                             <div className="p-6">
@@ -66,7 +66,7 @@ export default function AllProjects() {
 
                 {/* Valtara */}
                 <a href="https://github.com/brentibanez331/boat-game-fixed" target="_blank" className="masonry-item">
-                    <div className="bg-neutral-950 w-full sm:h-52 rounded-md overflow-hidden flex flex-col justify-between relative transition duration-300 hover:scale-105">
+                    <div className="bg-[#0E0E10] w-full sm:h-52 rounded-md overflow-hidden flex flex-col justify-between relative transition duration-300 hover:scale-105">
                         <div className="top-0 left-0 w-full">
                             <Image src="/projects/valtara.png" width={500} height={500} alt="Valtara" className="hidden h-32 object-cover" />
                             <div className="p-6">
@@ -83,7 +83,7 @@ export default function AllProjects() {
 
                 {/* Agronex */}
                 <a>
-                    <div className="bg-neutral-950 w-full sm:h-52 rounded-md overflow-hidden flex flex-col justify-between relative transition duration-300 hover:scale-105">
+                    <div className="bg-[#0E0E10] w-full sm:h-52 rounded-md overflow-hidden flex flex-col justify-between relative transition duration-300 hover:scale-105">
                         <div className="top-0 left-0 w-full">
                             <Image src="/projects/sidlak.png" width={500} height={500} alt="Sidlak" className="hidden h-32 object-cover" />
                             <div className="p-6">
@@ -99,7 +99,7 @@ export default function AllProjects() {
 
                 {/* Urinalysis Diagnosis */}
                 <a href="https://github.com/brentibanez331/gaiji-language-learning" target="_blank">
-                    <div className="bg-neutral-950 w-full sm:h-52 rounded-md overflow-hidden flex flex-col justify-between relative transition duration-300 hover:scale-105">
+                    <div className="bg-[#0E0E10] w-full sm:h-52 rounded-md overflow-hidden flex flex-col justify-between relative transition duration-300 hover:scale-105">
                         <div className="top-0 left-0 w-full absolute">
                             <Image src="/projects/gaiji.png" width={500} height={500} alt="Gaiji" className="hidden h-32 object-cover" />
                             <div className="p-6">
