@@ -9,7 +9,7 @@ export default function Featured() {
             <div className="flex flex-col md:grid sm:justify-between mt-10 md:mt-14 md:grid-cols-3 gap-3 mt-14 md:gap-3 xl:gap-7">
                 {/* Agronex */}
                 <a href="https://github.com/brentibanez331/plant-disease-classification" target="_blank">
-                    <div className="bg-[#0E0E10] md:h-52 p-6 sm:p-5 xl:p-6 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
+                    <div className="bg-[#0E0E10] md:h-52 xl:h-48 p-6 sm:p-5 xl:p-6 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
                         <div>
                             <h2 className="text-lg font-bold mb-3.5">plant-disease-classification</h2>
                             <p className="text-sm">A computer vision model for predicting agricultural plant diseases.</p>
@@ -23,7 +23,7 @@ export default function Featured() {
                 </a>
                 {/* Urinalysis Diagnosis */}
                 <a href="https://github.com/brentibanez331/urinalysis-ph" target="_blank" className="masonry-item">
-                    <div className="bg-[#0E0E10] md:h-52 p-6 sm:p-5 xl:p-6 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
+                    <div className="bg-[#0E0E10] md:h-52 p-6 xl:h-48 sm:p-5 xl:p-6 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
                         <div>
                             <h2 className="text-lg font-bold mb-3.5">urinalysis-diagnosis</h2>
                             <p className="text-sm">A binary classification model for reducing misdiagnosis in urinalysis tests.</p>
@@ -35,7 +35,7 @@ export default function Featured() {
                     </div>
                 </a>
                 <a href="https://creativetourism.ph/" target="_blank">
-                    <div className="bg-[#0E0E10] mb-3.5 md:h-52 p-6 xl:p-6 sm:p-5 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
+                    <div className="bg-[#0E0E10] mb-3.5 md:h-52 xl:h-48 p-6 xl:p-6 sm:p-5 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
                         <div>
                             <h2 className="text-lg font-bold mb-3.5">pctc-2023</h2>
                             <p className="text-sm">A website for the Philippine Creative Tourism Congress 2023 for the Department of Tourism.</p>
