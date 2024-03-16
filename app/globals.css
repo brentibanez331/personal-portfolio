@@ -85,3 +85,7 @@ body {
   50%{ transform: scaleY(.4); }
   75%{ transform: scaleY(1.2); }
 }
+
+.masonry-item {
+  break-inside: avoid;
+}
