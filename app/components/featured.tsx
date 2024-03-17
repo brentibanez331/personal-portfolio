@@ -4,7 +4,7 @@ import { IoLogoJavascript } from "react-icons/io";
 
 export default function Featured() {
     return (
-        <div className="mx-7 sm:mx-10 md:my-36 relative z-20 lg:mx-40">
+        <div className="mx-7 sm:mx-10 md:my-36 relative z-20 lg:mx-40 2xl:mx-60">
             <h1 className="text-3xl sm:text-4xl font-semibold">Featured Projects</h1>
             <div className="flex flex-col md:grid sm:justify-between mt-10 md:mt-14 md:grid-cols-3 gap-3 mt-14 md:gap-3 xl:gap-7">
                 {/* Agronex */}

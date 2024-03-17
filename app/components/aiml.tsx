@@ -4,7 +4,7 @@ import { IoMdDownload, IoLogoJavascript } from "react-icons/io";
 
 export default function AIMLProjects() {
     return (
-        <div className="mx-7 sm:mx-10 my-36 relative z-20 lg:mx-24 lg:mx-40">
+        <div className="mx-7 sm:mx-10 my-36 relative z-20 lg:mx-24 lg:mx-40 2xl:mx-60">
             <h1 className="text-3xl sm:text-4xl font-semibold">Data Science / ML Works</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5 mt-10 md:mt-14 xl:gap-7">
                 {/* Agronex */}
