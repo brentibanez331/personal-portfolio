@@ -12,7 +12,7 @@ export default function Content() {
             <br/>
             <p>I am an aspiring Machine Learning Engineer and Data Science Professional and I am very much looking 
                 forward to pursue a career in this field. Throughout my academic journey, I have gained multiple 
-                certifications with topics in Machine Learning, Data Science, </p>
+                certifications with topics in Machine Learning, Data Science, .</p>
         </div>
 
     );
