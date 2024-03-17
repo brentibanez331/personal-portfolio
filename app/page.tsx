@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import Navbar from "./components/navbar";
+import Navbar from "./components/navbar/navbar";
 import Hero from "./components/hero";
 import Featured from "./components/featured";
 import AllProjects from "./components/allprojects";

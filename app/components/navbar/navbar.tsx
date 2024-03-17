@@ -55,16 +55,16 @@ export default function Navbar() {
                 </h2>
             </div>
             <div>
-                <RxHamburgerMenu className="text-2xl sm:hidden"/>
-                <ul className="hidden sm:flex items-center">
-                    <li><Link href="" className="font-medium text-lg relative after:absolute after:left-0 after:bottom-[-4px] after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Resume</Link></li>
-                    <li><Link href="/blog" className="ml-12 font-medium text-lg relative after:absolute after:left-0 after:bottom-[-4px] after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Blog</Link></li>
-                    <li className="ml-16">
+                {/* <RxHamburgerMenu className="text-2xl sm:hidden"/> */}
+                <ul className="flex items-center">
+                    <li><Link href="" className="font-medium text-sm sm:text-lg relative after:absolute after:left-0 after:bottom-[-4px] after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Resume</Link></li>
+                    <li><Link href="/blog" className="ml-7 sm:ml-12 text-sm font-medium sm:text-lg relative after:absolute after:left-0 after:bottom-[-4px] after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Blog</Link></li>
+                    <li className="hidden sm:block ml-16">
                         <a href="https://www.linkedin.com/in/renibanez/" target="_blank" rel="noopener noreferrer">
                             <FaLinkedinIn className="text-2xl transition duration-300 hover:scale-110" />
                         </a>
                     </li>
-                    <li className="ml-16">
+                    <li className="hidden sm:block ml-16">
                         <a href="https://github.com/brentibanez331" target="_blank" rel="noopener noreferrer">
                             <FaGithub className="text-2xl transition duration-300 hover:scale-110" />
                         </a>

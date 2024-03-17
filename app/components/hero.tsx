@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 
 export default function Hero() {
     return (
@@ -12,15 +13,24 @@ export default function Hero() {
                     </div>
                     <p className="text-slate-300 text-center text-sm font-bold sm:text-xl sm:mb-2 xl:text-3xl lg:text-start">ML Engineer and Data Scientist</p>
                     <p className="text-slate-300 text-center text-sm mb-3.5 sm:text-start sm:mb-0 md:hidden">3rd year CS student from the University of St. La Salle.</p>
+                    <div className="mt-3.5 flex w-20 justify-between items-center sm:hidden">
+                        <a href="https://www.linkedin.com/in/renibanez/" target="_blank" rel="noopener noreferrer">
+                            <FaLinkedinIn className="text-2xl transition duration-300 hover:scale-110" />
+                        </a>
+                        <a href="https://github.com/brentibanez331" target="_blank" rel="noopener noreferrer">
+                            <FaGithub className="text-2xl transition duration-300 hover:scale-110" />
+                        </a>
+                    </div>
+
 
                     <div>
-                        <p className="text-slate-300 text-center hidden md:block md:text-sm md:text-start md:mb-2 lg:text-lg lg:mt-7">A 3rd year computer science student from the University of St. La Salle.<span className="hidden xl:contents"><br className="hidden 2xl:block"/> I specialize in Machine Learning and Data Science.</span>
+                        <p className="text-slate-300 text-center hidden md:block md:text-sm md:text-start md:mb-2 lg:text-lg lg:mt-7">A 3rd year computer science student from the University of St. La Salle.<span className="hidden xl:contents"><br className="hidden 2xl:block" /> I specialize in Machine Learning and Data Science.</span>
                         </p>
-                        <p className="text-neutral-400 text-center hidden md:block md:text-sm md:text-start lg:text-lg"><strong>VP for Programs</strong> at DEVCON Bacolod<br/><strong>CIO</strong> at Google DSC-USLS</p>
+                        <p className="text-neutral-400 text-center hidden md:block md:text-sm md:text-start lg:text-lg"><strong>VP for Programs</strong> at DEVCON Bacolod<br /><strong>CIO</strong> at Google DSC-USLS</p>
                     </div>
 
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
