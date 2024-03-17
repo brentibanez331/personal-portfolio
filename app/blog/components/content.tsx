@@ -7,7 +7,7 @@ export default function Content() {
                 VP for Programs at DEVCON Bacolod Chapter, a non-profit organization that empowers Filipino developers. 
                 I am also the Chief Information Officer at Google DSC - USLS, a university club in Bacolod. I was awarded 
                 a Full Scholarship by CHED in college because of my grades. My dedication to acquiring knowledge is evident in my 
-                academic performance, as I have been a Dean&aposs List awardee for 5 semesters upon enrolling. Along with this, I 
+                academic performance, as I have been a Dean&apos;s List awardee for 5 semesters upon enrolling. Along with this, I 
                 am also a DataCamp scholar and a DICT scholar.</p>
             <br/>
             <p>I am an aspiring Machine Learning Engineer and Data Science Professional and I am very much looking 
