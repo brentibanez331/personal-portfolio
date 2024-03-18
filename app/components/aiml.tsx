@@ -41,7 +41,7 @@ export default function AIMLProjects() {
                     <div className="bg-[#0E0E10] sm:h-48 md:h-52 p-6 xl:h-48 xl:p-6 sm:p-5 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
                         <div>
                             <h2 className="text-lg font-bold mb-3.5">obesity-risk</h2>
-                            <p className="text-sm">This respository contains a multi-class CNN model for predicting level of obesity risk</p>
+                            <p className="text-sm">This repository contains a multi-class CNN model for predicting level of obesity risk</p>
                         </div>
                         <div className="flex mt-5 md:mt-0">
                             <a href="https://github.com/brentibanez331/obesity-risk" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
@@ -54,7 +54,7 @@ export default function AIMLProjects() {
                     <div className="bg-[#0E0E10] sm:h-48 md:h-52 p-6 xl:h-48 xl:p-6 sm:p-5 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
                         <div>
                             <h2 className="text-lg font-bold mb-3.5">osteoporosis-risk</h2>
-                            <p className="text-sm">This respository contains a classification model for predicting if patient has osteoporosis.</p>
+                            <p className="text-sm">This repository contains a classification model for predicting if patient has osteoporosis.</p>
                         </div>
                         <div className="flex mt-5 md:mt-0">
                             <a href="https://github.com/brentibanez331/osteoporosis-risk" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
@@ -63,20 +63,20 @@ export default function AIMLProjects() {
                 </a>
 
                 {/* Urinalysis Diagnosis */}
-                <a href="https://github.com/brentibanez331/urinalysis-ph" target="_blank">
+                <a href="https://github.com/brentibanez331/data-science-salaries" target="_blank">
                     <div className="bg-[#0E0E10] sm:h-48 md:h-52 xl:h-48 p-6 xl:p-6 sm:p-5 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
                         <div>
                             <h2 className="text-lg font-bold mb-3.5">data-science-salaries</h2>
                             <p className="text-sm">This repository contains EDA on Data Science related jobs Salary in USD across countries</p>
                         </div>
                         <div className="flex mt-5 md:mt-0">
-                            <a href="https://github.com/brentibanez331/urinalysis-ph" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
+                            <a href="https://github.com/brentibanez331/data-science-salaries" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
                         </div>
                     </div>
                 </a>
 
                 {/* Creative Tourism */}
-                <a href="https://creativetourism.ph/" target="_blank">
+                <a href="https://github.com/brentibanez331/digit-recognizer" target="_blank">
                     <div className="bg-[#0E0E10] sm:h-48 md:h-52 xl:h-48 p-6 xl:p-6 sm:p-5 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
 
                         <div>
@@ -84,7 +84,7 @@ export default function AIMLProjects() {
                             <p className="text-sm">This repository contains a simple CNN architecture for predicting digits from images.</p>
                         </div>
                         <div className="flex mt-5 md:mt-0">
-                            <a href="https://github.com/brentibanez331/PCTC_2023" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
+                            <a href="https://github.com/brentibanez331/digit-recognizer" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
                         </div>
                     </div>
                 </a>

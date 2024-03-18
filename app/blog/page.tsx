@@ -54,7 +54,7 @@ export default function Blog() {
         <div>
           
         </div>
-        <div className="relative z-40">
+        <div className="relative z-40 pb-2">
           <Profile></Profile>
           <Content></Content>
           <Footer></Footer>

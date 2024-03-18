@@ -10,8 +10,8 @@ export default function AllProjects() {
             <h1 className="text-3xl sm:text-4xl font-semibold">Other Works</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5 mt-10 md:mt-14 xl:gap-7">
                 {/* SmileIT Inc. */}
-                <a href="https://github.com/brentibanez331/PCTC_202" target="_blank" className="masonry-item">
-                    <div className="bg-[#0E0E10] sm:h-48 md:h-52 lg:h-[340px] xl:h-80 2xl:h-[310px] rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
+                <a href="https://github.com/brentibanez331/PCTC_2023" target="_blank" className="masonry-item">
+                    <div className="bg-[#0E0E10] sm:h-48 md:h-52 lg:h-[340px] xl:h-80 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
                         <div className="top-0 left-0 w-full flex flex-col justify-between">
                             <Image src="/projects/PCTC.png" width={500} height={500} alt="Valtara" className="hidden lg:block h-32 object-cover rounded-t-md" />
                             <div className="flex flex-col justify-between md:h-52 xl:h-48 2xl:h-44 p-6">
@@ -30,7 +30,7 @@ export default function AllProjects() {
                         </div>
                     </div>
                 </a>
-                <a href="https://github.com/brentibanez331/PCTC_202" target="_blank" className="masonry-item">
+                <a href="https://github.com/Gianheybo/smileit" target="_blank" className="masonry-item">
                     <div className="bg-[#0E0E10] sm:h-48 md:h-52 lg:h-[340px] xl:h-80 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
                         <div className="top-0 left-0 w-full flex flex-col justify-between">
                             <Image src="/projects/smileit.png" width={500} height={500} alt="Valtara" className="hidden lg:block h-32 object-cover rounded-t-md" />
@@ -50,7 +50,7 @@ export default function AllProjects() {
                     </div>
                 </a>
 
-                <a href="https://github.com/brentibanez331/PCTC_202" target="_blank" className="masonry-item">
+                <a href="https://github.com/brentibanez331/boat-game-fixed" target="_blank" className="masonry-item">
                     <div className="bg-[#0E0E10] sm:h-48 md:h-52 lg:h-[340px] xl:h-80 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
                         <div className="top-0 left-0 w-full flex flex-col justify-between">
                             <Image src="/projects/treasuretide.png" width={500} height={500} alt="Valtara" className="hidden lg:block h-32 object-cover rounded-t-md" />
@@ -70,7 +70,7 @@ export default function AllProjects() {
                         </div>
                     </div>
                 </a>
-                <a href="https://github.com/brentibanez331/PCTC_202" target="_blank" className="masonry-item">
+                <a href="https://github.com/brentibanez331/valtara-final" target="_blank" className="masonry-item">
                     <div className="bg-[#0E0E10] sm:h-48 md:h-52 lg:h-[340px] xl:h-80 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
                         <div className="top-0 left-0 w-full flex flex-col justify-between">
                             <Image src="/projects/valtara.png" width={500} height={500} alt="Valtara" className="hidden lg:block h-32 object-cover rounded-t-md" />
@@ -80,7 +80,7 @@ export default function AllProjects() {
                                     <p className="text-sm">A 2D platformer game built in Unity. Practiced good shaders usage and 2d animations.</p>
                                 </div>
                                 <div className="flex">
-                                    <a href="https://github.com/brentibanez331/boat-game-fixed" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
+                                    <a href="https://github.com/brentibanez331/valtara-final" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
                                     <a target="_blank"><FaUnity className="text-xl mr-6 text-neutral-400" /></a>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@ export default function AllProjects() {
                         </div>
                     </div>
                 </a>
-                <a href="https://github.com/brentibanez331/PCTC_202" target="_blank" className="masonry-item">
+                <a href="https://www.figma.com/file/fIrdQEo6dBRq8hlxi3UA3v/SIDLAK%3A-NOTES-LIBRARY-SOFTWARE?type=design&node-id=0%3A1&mode=design&t=zeDeoSJO5e7MhzMq-1" target="_blank" className="masonry-item">
                     <div className="bg-[#0E0E10] sm:h-48 md:h-52 lg:h-[340px] xl:h-80 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
                         <div className="top-0 left-0 w-full flex flex-col justify-between">
                             <Image src="/projects/sidlak.png" width={500} height={500} alt="Sidlak" className="hidden lg:block h-32 object-cover rounded-t-md" />
@@ -98,14 +98,14 @@ export default function AllProjects() {
                                     <p className="text-sm">A UI/UX design and prototype for a smart notes library made in Figma.</p>
                                 </div>
                                 <div className="flex">
-                                    <a target="_blank"><FaFigma className="text-xl mr-6 text-neutral-400" /></a>
+                                    <a href="https://www.figma.com/file/fIrdQEo6dBRq8hlxi3UA3v/SIDLAK%3A-NOTES-LIBRARY-SOFTWARE?type=design&node-id=0%3A1&mode=design&t=zeDeoSJO5e7MhzMq-1" target="_blank"><FaFigma className="text-xl mr-6 text-neutral-400 hover:text-white" /></a>
                                 </div>
                             </div>
 
                         </div>
                     </div>
                 </a>
-                <a href="https://github.com/brentibanez331/PCTC_202" target="_blank" className="masonry-item">
+                <a href="https://github.com/brentibanez331/gaiji-language-learning" target="_blank" className="masonry-item">
                     <div className="bg-[#0E0E10] sm:h-48 md:h-52 lg:h-[340px] xl:h-80 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
                         <div className="top-0 left-0 w-full flex flex-col justify-between">
                             <Image src="/projects/gaiji.png" width={500} height={500} alt="Sidlak" className="hidden lg:block h-32 object-cover rounded-t-md" />
@@ -115,7 +115,7 @@ export default function AllProjects() {
                                     <p className="text-sm">A language learning app built using Java, Google Translate API, and JFrame GUI.</p>
                                 </div>
                                 <div className="flex">
-                                    <a href="https://github.com/brentibanez331/boat-game-fixed" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
+                                    <a href="https://github.com/brentibanez331/gaiji-language-learning" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
                                     <a target="_blank"><FaJava className="text-xl mr-6 text-neutral-400" /></a>
                                 </div>
                             </div>
