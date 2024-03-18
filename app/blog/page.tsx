@@ -37,7 +37,7 @@ export default function Blog() {
           className={`bg-black fixed inset-0 z-[100] items-center flex transition-opacity duration-300 ${isLoaderFading ? 'opacity-0' : 'opacity-100'
             }`}
         >
-          <div className="loader mx-auto">
+          <div className="loader mx-auto pl-3.5">
             <div className="box"></div>
             <div className="box"></div>
             <div className="box"></div>
