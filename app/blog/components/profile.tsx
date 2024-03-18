@@ -10,7 +10,7 @@ export default function Profile() {
                 <Image src="/brent-2.jpg" width={500} height={500} className="mr-5 lg:mr-8 rounded-full size-28 object-cover lg:size-32" alt="Brent Ibañez" />
                 <div className="">
                     <h1 className="font-bold text-2xl lg:text-3xl">Brent Ibañez</h1>
-                    <h1 className="lg:text-xl">@renibanez</h1>
+                    <h1 className="lg:text-xl">@<a className="underline" href="https://www.linkedin.com/in/renibanez/" target="_blank">renibanez</a></h1>
                 </div>
             </div>
         </div>
