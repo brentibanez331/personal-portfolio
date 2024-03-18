@@ -98,7 +98,7 @@ export default function AllProjects() {
                                     <p className="text-sm">A UI/UX design and prototype for a smart notes library made in Figma.</p>
                                 </div>
                                 <div className="flex">
-                                    <a href="https://www.figma.com/file/fIrdQEo6dBRq8hlxi3UA3v/SIDLAK%3A-NOTES-LIBRARY-SOFTWARE?type=design&node-id=0%3A1&mode=design&t=zeDeoSJO5e7MhzMq-1" target="_blank"><FaFigma className="text-xl mr-6 text-neutral-400 hover:text-white" /></a>
+                                    <a href="https://www.figma.com/file/fIrdQEo6dBRq8hlxi3UA3v/SIDLAK%3A-NOTES-LIBRARY-SOFTWARE?type=design&node-id=0%3A1&mode=design&t=zeDeoSJO5e7MhzMq-1" target="_blank"><FaFigma className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white" /></a>
                                 </div>
                             </div>
 
