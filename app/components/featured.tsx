@@ -1,4 +1,4 @@
-import { FaCode, FaGlobe, FaAndroid, FaHtml5 } from "react-icons/fa";
+import { FaCode, FaGlobe, FaAndroid, FaHtml5, FaLaravel } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 
 
@@ -34,15 +34,15 @@ export default function Featured() {
                         </div>
                     </div>
                 </a>
-                <a href="https://creativetourism.ph/" target="_blank">
+                <a href="https://github.com/brentibanez331/money-teller-system" target="_blank">
                     <div className="bg-[#0E0E10] mb-3.5 md:h-52 xl:h-48 p-6 xl:p-6 sm:p-5 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
                         <div>
-                            <h2 className="text-lg font-bold mb-3.5">pctc-2023</h2>
-                            <p className="text-sm">A website for the Philippine Creative Tourism Congress 2023 for the Department of Tourism.</p>
+                            <h2 className="text-lg font-bold mb-3.5">money-teller-system</h2>
+                            <p className="text-sm">A web app for currency exchange and money transfer using ExchangeAPI.</p>
                         </div>
                         <div className="flex mt-5 md:mt-0">
-                        <a href="https://github.com/brentibanez331/PCTC_2023" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
-                        <a href="https://creativetourism.ph/" target="_blank"><FaGlobe className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
+                        <a href="https://github.com/brentibanez331/money-teller-system" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
+                        <a><FaLaravel className="text-xl mr-6 text-neutral-400" /></a>
                         <a><FaHtml5 className="text-xl mr-6 text-neutral-400" /></a>
                         <a><IoLogoJavascript className="text-xl mr-4 text-neutral-400" /></a>
                         </div>

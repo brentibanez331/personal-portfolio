@@ -57,7 +57,7 @@ export default function Navbar() {
             <div>
                 {/* <RxHamburgerMenu className="text-2xl sm:hidden"/> */}
                 <ul className="flex items-center">
-                    <li><a href="https://drive.google.com/file/d/1GEBYNm-8p0YLun78wLfDK-cvWF0GYtc1/view?usp=sharing" target="_blank" className="font-medium text-sm sm:text-lg relative after:absolute after:left-0 after:bottom-[-4px] after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Resume</a></li>
+                    <li><a href="https://drive.google.com/file/d/1_h6K3c0j8PNE7swYrwyHAqAZjH5beN5I/view?usp=sharing" target="_blank" className="font-medium text-sm sm:text-lg relative after:absolute after:left-0 after:bottom-[-4px] after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Resume</a></li>
                     <li><Link href="/blog" className="ml-7 sm:ml-12 text-sm font-medium sm:text-lg relative after:absolute after:left-0 after:bottom-[-4px] after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Blog</Link></li>
                     <li className="hidden sm:block ml-16">
                         <a href="https://www.linkedin.com/in/renibanez/" target="_blank" rel="noopener noreferrer">
