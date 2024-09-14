@@ -7,6 +7,19 @@ export default function Featured() {
         <div className="mx-7 sm:mx-10 md:my-36 relative z-20 lg:mx-40 2xl:mx-60">
             <h1 className="text-3xl sm:text-4xl font-semibold">Featured Projects</h1>
             <div className="flex flex-col md:grid sm:justify-between mt-10 md:mt-14 md:grid-cols-3 gap-3 mt-14 md:gap-3 xl:gap-7">
+                <a href="https://github.com/brentibanez331/plant-disease-classification" target="_blank">
+                    <div className="bg-[#0E0E10] md:h-52 xl:h-48 p-6 sm:p-5 xl:p-6 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
+                        <div>
+                            <h2 className="text-lg font-bold mb-3.5">certificate-validation</h2>
+                            <p className="text-sm">A certificate validation system for DICT Region 6</p>
+                        </div>
+                        <div className="flex mt-5 md:mt-0">
+                            <a href="https://github.com/brentibanez331/plant-disease-classification" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
+                            <a href="https://plant-diseases-classifier.vercel.app/" target="_blank"><FaGlobe className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
+                            <a><FaAndroid className="text-xl mr-4 text-neutral-400" /></a>
+                        </div>
+                    </div>
+                </a>
                 {/* Agronex */}
                 <a href="https://github.com/brentibanez331/plant-disease-classification" target="_blank">
                     <div className="bg-[#0E0E10] md:h-52 xl:h-48 p-6 sm:p-5 xl:p-6 rounded-md flex flex-col justify-between transition duration-300 hover:scale-105 w-full">
@@ -15,7 +28,7 @@ export default function Featured() {
                             <p className="text-sm">A computer vision model for predicting agricultural plant diseases.</p>
                         </div>
                         <div className="flex mt-5 md:mt-0">
-                        <a href="https://github.com/brentibanez331/plant-disease-classification" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
+                            <a href="https://github.com/brentibanez331/plant-disease-classification" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
                             <a href="https://plant-diseases-classifier.vercel.app/" target="_blank"><FaGlobe className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
                             <a><FaAndroid className="text-xl mr-4 text-neutral-400" /></a>
                         </div>
@@ -41,10 +54,10 @@ export default function Featured() {
                             <p className="text-sm">A web app for currency exchange and money transfer using ExchangeAPI.</p>
                         </div>
                         <div className="flex mt-5 md:mt-0">
-                        <a href="https://github.com/brentibanez331/money-teller-system" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
-                        <a><FaLaravel className="text-xl mr-6 text-neutral-400" /></a>
-                        <a><FaHtml5 className="text-xl mr-6 text-neutral-400" /></a>
-                        <a><IoLogoJavascript className="text-xl mr-4 text-neutral-400" /></a>
+                            <a href="https://github.com/brentibanez331/money-teller-system" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
+                            <a><FaLaravel className="text-xl mr-6 text-neutral-400" /></a>
+                            <a><FaHtml5 className="text-xl mr-6 text-neutral-400" /></a>
+                            <a><IoLogoJavascript className="text-xl mr-4 text-neutral-400" /></a>
                         </div>
                     </div>
                 </a>
