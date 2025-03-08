@@ -15,9 +15,15 @@ export default function AIMLProjects() {
                             <p className="text-sm">A computer vision model for predicting agricultural plant diseases.</p>
                         </div>
                         <div className="flex mt-5 md:mt-0">
-                            <a href="https://github.com/brentibanez331/plant-disease-classification" target="_blank"><FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
-                            <a href="https://plant-diseases-classifier.vercel.app/" target="_blank"><FaGlobe className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" /></a>
-                            <a><FaAndroid className="text-xl mr-4 text-neutral-400" /></a>
+                            <a href="https://github.com/brentibanez331/plant-disease-classification" target="_blank">
+                                <FaCode className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" />
+                            </a>
+                            <a href="https://plant-diseases-classifier.vercel.app/" target="_blank">
+                                <FaGlobe className="text-xl mr-6 text-white md:text-neutral-400 hover:text-white transition duration-150" />
+                            </a>
+                            <a>
+                                <FaAndroid className="text-xl mr-4 text-neutral-400" />
+                            </a>
                         </div>
                     </div>
                 </a>
