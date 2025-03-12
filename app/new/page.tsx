@@ -6,6 +6,10 @@ import Nav from "@/components/Nav";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useScramble } from "use-scramble";
+import { Separator } from "@/components/ui/separator"
+import Image from "next/image";
+import Lenis from "lenis"
+import WorkSection from "@/components/WorkCards";
 
 
 let easeFactor = 0.02;
@@ -69,8 +73,18 @@ export default function Page() {
     const containerRef = useRef<HTMLDivElement>(null)
     const imageRef = useRef<HTMLImageElement>(null)
     gsap.registerPlugin(ScrollTrigger)
+    const lenis = new Lenis()
+
+    lenis.on('scroll', ScrollTrigger.update)
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 1000)
+    })
+
+    gsap.ticker.lagSmoothing(0);
 
     useLayoutEffect(() => {
+        console.log(containerRef)
+
         const scene = new THREE.Scene()
 
         const initialWidth = imageRef.current?.offsetWidth;
@@ -144,7 +158,7 @@ export default function Page() {
                 containerRef.current.removeChild(renderer.domElement)
             }
         }
-    }, [])
+    }, [containerRef, imageRef])
 
     const handleMouseMove = (event: MouseEvent) => {
         easeFactor = 0.02;
@@ -184,25 +198,6 @@ export default function Page() {
         scramble: 8
     })
 
-    const workRef = useRef<HTMLDivElement>(null)
-
-    useEffect(() => {
-        gsap.to('body', {
-            backgroundColor: '#1A1A1A', // Target white background
-            color: '#ffffff',
-            scrollTrigger: {
-                trigger: workRef.current,
-                start: 'top 80%', // Start transition when top of work section is 80% from the top of viewport
-                end: 'top 20%', // Complete transition when top of work section is 20% from the top
-                scrub: true, // Smooth animation that ties to scroll position
-                markers: process.env.NODE_ENV === 'development', // Only show markers in development
-                onEnter: () => console.log('Entering work section'),
-                onLeave: () => console.log('Leaving work section'),
-                onEnterBack: () => console.log('Entering work section backwards'),
-                onLeaveBack: () => console.log('Leaving work section backwards'),
-            }
-        });
-    }, [workRef])
 
     return (
         <div className="relative no-scrollbar">
@@ -228,9 +223,9 @@ export default function Page() {
                 <div>Lorem Ipsum dolor Sit amet idipiscing</div>
             </div>
 
-            <div ref={workRef} className="h-screen w-full flex flex-col px-8">
-                <h2 className="gen-sans-bold text-9xl">work</h2>
-                
+            <WorkSection/>
+
+            <div className="h-screen end-pin">
 
             </div>
         </div>

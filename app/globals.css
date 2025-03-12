@@ -99,6 +99,11 @@
   font-weight: 700;
 }
 
+.gen-sans-semibold{
+  font-family: var(--gen-sans);
+  font-weight: 600;
+}
+
 #hero-text{
   will-change: transform;
 }
@@ -191,8 +196,6 @@ canvas {
   }
 }
 
-
-
 @layer base {
   * {
     @apply border-border;
@@ -200,4 +203,8 @@ canvas {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+body {
+  background: #fff;
 }
