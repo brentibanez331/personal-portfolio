@@ -40,7 +40,18 @@ const layGrotesk = localFont({
       path: "./../public/fonts/LayGrotesk/Regular.woff2",
       weight: '400',
       style: 'normal'
+    },
+    {
+      path: "./../public/fonts/LayGrotesk/Bold.woff2",
+      weight: '700',
+      style: 'normal'
+    },
+    {
+      path: "./../public/fonts/LayGrotesk/Semibold.woff2",
+      weight: '600',
+      style: 'normal'
     }
+
   ]
 })
 

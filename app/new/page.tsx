@@ -10,6 +10,7 @@ import { Separator } from "@/components/ui/separator"
 import Image from "next/image";
 import Lenis from "lenis"
 import WorkSection from "@/components/WorkCards";
+import About from "@/components/About";
 
 
 let easeFactor = 0.02;
@@ -157,6 +158,8 @@ export default function Page() {
             if (containerRef.current && renderer.domElement) {
                 containerRef.current.removeChild(renderer.domElement)
             }
+
+            
         }
     }, [containerRef, imageRef])
 
@@ -218,10 +221,7 @@ export default function Page() {
                 </div>
             </div>
 
-            <div className="h-screen">
-                ABOUT ME
-                <div>Lorem Ipsum dolor Sit amet idipiscing</div>
-            </div>
+            <About/>
 
             <WorkSection/>
 

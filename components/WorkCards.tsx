@@ -26,7 +26,7 @@ export default function WorkSection() {
     };
 
     useEffect(() => {
-        gsap.to('body', {
+        const ctx = gsap.to('body', {
             backgroundColor: '#1A1A1A', // Target white background
             color: '#ffffff',
             scrollTrigger: {
@@ -37,6 +37,15 @@ export default function WorkSection() {
                 markers: false, // Only show markers in development
             }
         });
+
+        return () => {
+            ctx.revert()
+
+            gsap.set('body', {
+                backgroundColor: '',
+                color: ''
+            });
+        }
     }, [workRef])
 
     // useEffect(() => {

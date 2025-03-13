@@ -104,6 +104,20 @@
   font-weight: 600;
 }
 
+.lay{
+  font-family: var(--lay-grotesk);
+}
+
+.lay-bold{
+  font-family: var(--lay-grotesk);
+  font-weight: 700
+}
+
+.lay-semibold{
+  font-family: var(--lay-grotesk);
+  font-weight: 600
+}
+
 #hero-text{
   will-change: transform;
 }
