@@ -1,22 +1,27 @@
 import Nav from "@/components/Nav";
 import Link from "next/link";
 import { ArrowDownIcon } from "lucide-react";
+import { TextReveal } from "@/components/TextReveal";
+import { TextFade } from "@/components/TextFade";
 
 export default function Page() {
     return (
         <div className="relative no-scrollbar">
             <Nav />
             <div className="mx-4 mt-20">
-                <div className="flex items-end space-x-2">
+
+                <TextFade direction="up" className="flex items-end space-x-2">
                     <h1 className="text-9xl gen-sans-bold">cv</h1>
                     <div className="flex pb-3">
                         <p>download here</p>
                         <ArrowDownIcon strokeWidth={1} />
                     </div>
-                </div>
+                </TextFade>
+
                 <div className="w-full justify-center flex py-16">
                     <div className="grid grid-cols-2 gap-32">
-                        <div className=" space-y-4">
+
+                        <TextFade direction="up" className="space-y-4">
                             <h4 className="gen-sans-bold text-2xl">Experience</h4>
                             <div>
                                 <p className="font-bold">Callo Technologies Inc.</p>
@@ -38,9 +43,9 @@ export default function Page() {
                                 <p className="font-semibold">SOFTWARE ENGINEER INTERN</p>
                                 <p>June 2024 - August 2024</p>
                             </div>
-                        </div>
+                        </TextFade>
                         {/* <Separator orientation="vertical" className="h-[500px] bg-neutral-700" /> */}
-                        <div className=" space-y-4">
+                        <TextFade direction="up" className="space-y-4">
                             <h4 className="gen-sans-bold text-2xl">Education</h4>
                             <div>
                                 <p className="font-bold">University of St. La Salle - PH</p>
@@ -52,10 +57,9 @@ export default function Page() {
                                     <li>6x Dean's List awardee</li>
                                 </ul>
                             </div>
+                        </TextFade>
 
-                        </div>
-
-                        <div className=" space-y-8 col-span-2">
+                        <TextFade direction="up" className=" space-y-8 col-span-2">
                             <h4 className="gen-sans-bold text-2xl">Leadership Experience</h4>
                             <div>
                                 <p className="font-bold">Computer Science Society - USLS</p>
@@ -89,8 +93,8 @@ export default function Page() {
                                     <li>Awarded as Best Special Interest Club 2024 @ Corps de Elite USLS</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className="col-span-2 space-y-8">
+                        </TextFade>
+                        <TextFade direction="up" className="col-span-2 space-y-8">
                             <h4 className="gen-sans-bold text-2xl">Awards</h4>
                             <div>
                                 <p className="font-bold">Philippine Startup Challenge 9 (Regional)</p>
@@ -130,7 +134,7 @@ export default function Page() {
                                     <li>Regional Finalist</li>
                                 </ul>
                             </div>
-                        </div>
+                        </TextFade>
 
                     </div>
                 </div>
