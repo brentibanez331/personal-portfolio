@@ -81,61 +81,75 @@ export default function WorkSection() {
 
         <div className="w-full flex flex-col px-8">
             <h2 className="gen-sans-bold text-9xl pb-8">works</h2>
-            <div ref={addToCardRefs} className="flex py-4 justify-between cursor-pointer">
-                <div className="flex flex-col justify-between w-2/5">
-                    <div className="flex flex-col space-y-1">
-                        <h4 className="gen-sans-semibold mb-3 text-xl">Full Stack Engineer</h4>
-                        <p className="text-md">Callo Technologies Inc.</p>
-                        <p className="text-md">oct 2024 — now</p>
-                    </div>
-                    <div className="grid grid-cols-2 grid-rows-2 gap-y-6">
-                        <div className="space-y-1">
-                            <p className="text-xs text-neutral-400 font-semibold">Live Site</p>
-                            <a href="https://ouicall.com" target="_blank" className="text-sm font-semibold">OUICALL.COM</a>
+            <div className="space-y-20">
+                <div ref={addToCardRefs} className="flex justify-between cursor-pointer">
+                    <div className="flex flex-col justify-between w-1/3">
+                        <div className="flex flex-col space-y-1">
+                            <h4 className="gen-sans-semibold text-xl">Full Stack Engineer</h4>
+                            <p className="text-md">Ouicall</p>
                         </div>
-                        <div className="space-y-0.5">
-                            <p className="text-xs text-neutral-400 font-semibold">Industry</p>
-                            <p className="text-sm font-semibold">Beauty care</p>
-                        </div>
-                        
-                            <p className="text-sm font-semibold">VIEW PROJECT</p>
+                        <div className="grid grid-cols-2 grid-rows-2 gap-y-8">
+                            <div className="space-y-1">
+                                <p className="text-xs text-neutral-400 font-semibold">Live Site</p>
+                                <a href="https://ouicall.com" target="_blank" className="text-sm font-semibold">OUICALL.COM</a>
+                            </div>
+                            <div className="space-y-0.5">
+                                <p className="text-xs text-neutral-400 font-semibold">Industry</p>
+                                <p className="text-sm font-semibold">Beauty care, Booking</p>
+                            </div>
+                            <p className="text-sm font-semibold pt-2">VIEW PROJECT</p>
                             {/* <p className="text-xs font-semibold"></p> */}
-                        
-                        <p>Industry</p>
-                        <p></p>
+
+                            <div className="space-y-0.5 ">
+                                <p className="text-xs text-neutral-400 font-semibold">Date</p>
+                                <p className="text-sm font-semibold">OCT 2024 - NOW</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className="flex items-end">
+                        <div className="text-end mr-4 space-y-1">
+                            <p className="text-xs text-neutral-400 font-semibold">Responsibilities</p>
+                            <div className="text-sm font-semibold space-y-1">
+                                <p>FRONTEND</p>
+                                <p>BACKEND</p>
+                                <p>PROJECT MANAGEMENT</p>
+                                <p>DATABASE ENGINEERING</p>
+                            </div>
+                        </div>
+                        <div className="w-[750px] h-[500px] border border-neutral-400 rounded-lg overflow-hidden">
+                            <Image ref={addToImageRefs} src={"/projects/ouicall.png"} alt="" width={1000} height={1000} className="object-cover" />
+                        </div>
                     </div>
                 </div>
-                <div className="w-[750px] h-[500px] border border-neutral-400 rounded-lg overflow-hidden">
-                    <Image ref={addToImageRefs} src={"/projects/ouicall.png"} alt="" width={1000} height={1000} className="object-cover" />
-                </div>
-            </div>
 
-            <div ref={addToCardRefs} className="flex py-4 justify-between cursor-pointer">
-                <div className="flex flex-col">
-                    <h4 className="gen-sans-semibold text-5xl mb-3">Full Stack Engineer</h4>
-                    <p className="text-md">K92 Keema</p>
-                    <p className="text-md">nov 2024 — mar 2025</p>
+                <div ref={addToCardRefs} className="flex py-4 justify-between cursor-pointer">
+                    <div className="flex flex-col">
+                        <h4 className="gen-sans-semibold text-5xl mb-3">Full Stack Engineer</h4>
+                        <p className="text-md">K92 Keema</p>
+                        <p className="text-md">nov 2024 — mar 2025</p>
+                    </div>
+                    <Image ref={addToImageRefs} src={"/projects/PCTC.png"} alt="" width={1000} height={1000} className="w-[750px] h-[400px] rounded-md object-cover border border-neutral-200" />
                 </div>
-                <Image ref={addToImageRefs} src={"/projects/PCTC.png"} alt="" width={1000} height={1000} className="w-[750px] h-[400px] rounded-md object-cover border border-neutral-200" />
-            </div>
 
-            <div ref={addToCardRefs} className="flex py-4 justify-between cursor-pointer">
-                <div className="flex flex-col">
-                    <h4 className="gen-sans-semibold text-5xl mb-3">Software Engineer</h4>
-                    <p className="text-md">ACF Solutions</p>
-                    <p className="text-md">may 2024 — oct 2024</p>
+                <div ref={addToCardRefs} className="flex py-4 justify-between cursor-pointer">
+                    <div className="flex flex-col">
+                        <h4 className="gen-sans-semibold text-5xl mb-3">Software Engineer</h4>
+                        <p className="text-md">ACF Solutions</p>
+                        <p className="text-md">may 2024 — oct 2024</p>
+                    </div>
+                    <Image ref={addToImageRefs} src={"/projects/PCTC.png"} alt="" width={1000} height={1000} className="w-[750px] h-[400px] rounded-md object-cover border border-neutral-200" />
                 </div>
-                <Image ref={addToImageRefs} src={"/projects/PCTC.png"} alt="" width={1000} height={1000} className="w-[750px] h-[400px] rounded-md object-cover border border-neutral-200" />
-            </div>
 
-            <Separator />
-            <div ref={addToCardRefs} className="flex py-4 justify-between cursor-pointer">
-                <div className="flex flex-col">
-                    <h4 className="gen-sans-semibold text-5xl mb-3">Software Engineer Intern</h4>
-                    <p className="text-md">Department of Information, Communications and Technology</p>
-                    <p className="text-md">jun 2024 — aug 2024</p>
+
+                <div ref={addToCardRefs} className="flex py-4 justify-between cursor-pointer">
+                    <div className="flex flex-col">
+                        <h4 className="gen-sans-semibold text-5xl mb-3">Software Engineer Intern</h4>
+                        <p className="text-md">Department of Information, Communications and Technology</p>
+                        <p className="text-md">jun 2024 — aug 2024</p>
+                    </div>
+                    <Image ref={addToImageRefs} src={"/projects/PCTC.png"} alt="" width={1000} height={1000} className="w-[750px] h-[400px] rounded-md object-cover border border-neutral-200" />
                 </div>
-                <Image ref={addToImageRefs} src={"/projects/PCTC.png"} alt="" width={1000} height={1000} className="w-[750px] h-[400px] rounded-md object-cover border border-neutral-200" />
             </div>
         </div>
     )

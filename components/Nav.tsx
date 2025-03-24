@@ -3,20 +3,23 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from 'motion/react';
+import Hamburger from "./ui/hamburger";
 
 export default function Nav() {
     const router = useRouter()
 
     return (
-        <div className="flex justify-between w-full absolute top-0 z-[999] mix-blend-difference text-white sticky px-4 pt-2 gen-sans-bold">
+        <div className="flex justify-between w-full absolute top-0 z-[999] mix-blend-difference text-white sticky px-2 sm:px-4 pt-2 gen-sans-bold">
             <div className="cursor-pointer" onClick={() => router.push('/')}>brent.</div>
-            <div className="flex">
+            <div className="hidden sm:flex">
                 <div className="flex"><FlipLink href="/about">about</FlipLink>,</div>
                 <div className="flex"><FlipLink href="/work">work</FlipLink>,</div>
                 <div className="flex"><FlipLink href="/work">projects</FlipLink>,</div>
                 <div className="flex"><FlipLink href="">contact</FlipLink></div>
             </div>
-            <div onClick={() => router.push("/cv")} className="hover:text-neutral-500 transition ease cursor-pointer">check my cv</div>
+            <div onClick={() => router.push("/cv")} className="hidden sm:flex hover:text-neutral-500 transition ease cursor-pointer">check my cv</div>
+
+            <Hamburger className="hidden" />
         </div>
     )
 }
@@ -27,7 +30,6 @@ const FlipLink = ({ children, href }: { children: string, href: string }) => {
         initial="initial"
         whileHover="hovered"
         href={href}
-        
         className="relative block overflow-hidden whitespace-nowrap">
         <div>
             {children.split("").map((l, i) => {
@@ -44,7 +46,7 @@ const FlipLink = ({ children, href }: { children: string, href: string }) => {
                             }
                         }}
                         transition={{
-                            delay: 0.03*i,
+                            delay: 0.03 * i,
                             visualDuration: 0
                         }}
                         className="inline-block"

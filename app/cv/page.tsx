@@ -8,7 +8,7 @@ export default function Page() {
     return (
         <div className="relative no-scrollbar">
             <Nav />
-            <div className="mx-4 mt-20">
+            <div className="mx-2 sm:mx-4 mt-10 sm:mt-20 ">
 
                 <TextFade direction="up" className="flex items-end space-x-2">
                     <h1 className="text-9xl gen-sans-bold">cv</h1>
@@ -19,38 +19,37 @@ export default function Page() {
                 </TextFade>
 
                 <div className="w-full justify-center flex py-16">
-                    <div className="grid grid-cols-2 gap-32">
-
-                        <TextFade direction="up" className="space-y-4">
+                    <div className="grid grid-cols-2 gap-24 sm:gap-32">
+                        <TextFade direction="up" className="space-y-4 col-span-2 sm:col-span-1">
                             <h4 className="gen-sans-bold text-2xl">Experience</h4>
                             <div>
-                                <p className="font-bold">Callo Technologies Inc.</p>
-                                <p className="font-semibold">FULL STACK ENGINEER</p>
-                                <p>October 2024 - now</p>
+                                <p className="font-bold text-md">Callo Technologies Inc.</p>
+                                <p className="font-semibold text-sm sm:text-md">FULL STACK ENGINEER</p>
+                                <p className="text-xs sm:text-md">October 2024 - now</p>
                             </div>
                             <div>
-                                <p className="font-bold">K92 Keema</p>
-                                <p className="font-semibold">FULL STACK ENGINEER (Contract)</p>
-                                <p>November 2024 - March 2025</p>
+                                <p className="font-bold text-md">K92 Keema</p>
+                                <p className="font-semibold text-sm sm:text-md">FULL STACK ENGINEER</p>
+                                <p className="text-xs sm:text-md">November 2024 - March 2025</p>
                             </div>
                             <div>
-                                <p className="font-bold">ACF Solutions</p>
-                                <p className="font-semibold">SOFTWARE ENGINEER</p>
-                                <p>May 2024 - October 2024</p>
+                                <p className="font-bold text-md">ACF Solutions</p>
+                                <p className="font-semibold text-sm sm:text-md">SOFTWARE ENGINEER</p>
+                                <p className="text-xs sm:text-md">May 2024 - October 2024</p>
                             </div>
                             <div>
-                                <p className="font-bold">Department of ICT Philippines</p>
-                                <p className="font-semibold">SOFTWARE ENGINEER INTERN</p>
-                                <p>June 2024 - August 2024</p>
+                                <p className="font-bold text-md">Department of ICT Philippines</p>
+                                <p className="font-semibold text-sm sm:text-md">SOFTWARE ENGINEER INTERN</p>
+                                <p className="text-xs sm:text-md">June 2024 - August 2024</p>
                             </div>
                         </TextFade>
                         {/* <Separator orientation="vertical" className="h-[500px] bg-neutral-700" /> */}
-                        <TextFade direction="up" className="space-y-4">
+                        <TextFade direction="up" className="space-y-4 col-span-2 sm:col-span-1">
                             <h4 className="gen-sans-bold text-2xl">Education</h4>
                             <div>
-                                <p className="font-bold">University of St. La Salle - PH</p>
-                                <p className="font-semibold">BS in COMPUTER SCIENCE</p>
-                                <p>August 2021 - May 2025</p>
+                                <p className="font-bold text-md">University of St. La Salle - PH</p>
+                                <p className="font-semibold text-sm sm:text-md">BS in COMPUTER SCIENCE</p>
+                                <p className="text-xs ">August 2021 - May 2025</p>
                                 <ul className="text-sm list-disc ml-4">
                                     <li>1.39 GPA / 96% GWA</li>
                                     <li>Full Government Scholar</li>
