@@ -3,6 +3,7 @@ import { Separator } from "./ui/separator";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ImageDistort from "./ImageDistort";
 
 export default function WorkSection() {
     const cardRefs = useRef<HTMLDivElement[]>([]);
@@ -118,19 +119,62 @@ export default function WorkSection() {
                             </div>
                         </div>
                         <div className="w-[750px] h-[500px] border border-neutral-400 rounded-lg overflow-hidden">
+                            
                             <Image ref={addToImageRefs} src={"/projects/ouicall.png"} alt="" width={1000} height={1000} className="object-cover" />
                         </div>
                     </div>
                 </div>
 
-                <div ref={addToCardRefs} className="flex py-4 justify-between cursor-pointer">
+                <div ref={addToCardRefs} className="flex justify-between cursor-pointer">
+                    <div className="flex flex-col justify-between w-1/3">
+                        <div className="flex flex-col space-y-1">
+                            <h4 className="gen-sans-semibold text-xl">Full Stack Engineer</h4>
+                            <p className="text-md">K92</p>
+                        </div>
+                        <div className="grid grid-cols-2 grid-rows-2 gap-y-8">
+                            <div className="space-y-1">
+                                <p className="text-xs text-neutral-400 font-semibold">Live Site</p>
+                                <a href="https://k92-panel.vercel.app" target="_blank" className="text-sm font-semibold">K92-PANEL.VERCEL.APP</a>
+                            </div>
+                            <div className="space-y-0.5">
+                                <p className="text-xs text-neutral-400 font-semibold">Industry</p>
+                                <p className="text-sm font-semibold">Automotive, Paints</p>
+                            </div>
+                            <p className="text-sm font-semibold pt-2">VIEW PROJECT</p>
+                            {/* <p className="text-xs font-semibold"></p> */}
+
+                            <div className="space-y-0.5 ">
+                                <p className="text-xs text-neutral-400 font-semibold">Date</p>
+                                <p className="text-sm font-semibold">NOV 2024 - MAR 2025</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className="flex items-end">
+                        <div className="text-end mr-4 space-y-1">
+                            <p className="text-xs text-neutral-400 font-semibold">Responsibilities</p>
+                            <div className="text-sm font-semibold space-y-1">
+                                <p>WEB DEVELOPMENT</p>
+                                <p>BACKEND</p>
+                                <p>PROJECT MANAGEMENT</p>
+                                <p>DATABASE ENGINEERING</p>
+                            </div>
+                        </div>
+                        <div className="w-[750px] h-[500px] border border-neutral-400 rounded-lg overflow-hidden">
+                            
+                            <Image ref={addToImageRefs} src={"/projects/ouicall.png"} alt="" width={1000} height={1000} className="object-cover" />
+                        </div>
+                    </div>
+                </div>
+
+                {/* <div ref={addToCardRefs} className="flex py-4 justify-between cursor-pointer">
                     <div className="flex flex-col">
                         <h4 className="gen-sans-semibold text-5xl mb-3">Full Stack Engineer</h4>
                         <p className="text-md">K92 Keema</p>
                         <p className="text-md">nov 2024 — mar 2025</p>
                     </div>
                     <Image ref={addToImageRefs} src={"/projects/PCTC.png"} alt="" width={1000} height={1000} className="w-[750px] h-[400px] rounded-md object-cover border border-neutral-200" />
-                </div>
+                </div> */}
 
                 <div ref={addToCardRefs} className="flex py-4 justify-between cursor-pointer">
                     <div className="flex flex-col">

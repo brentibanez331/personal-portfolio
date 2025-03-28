@@ -19,7 +19,7 @@ export default function Nav() {
             </div>
             <div onClick={() => router.push("/cv")} className="hidden sm:flex hover:text-neutral-500 transition ease cursor-pointer">check my cv</div>
 
-            <Hamburger className="hidden" />
+            <Hamburger className="sm:hidden z-[999]" />
         </div>
     )
 }
