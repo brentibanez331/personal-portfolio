@@ -4,6 +4,59 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ImageDistort from "./ImageDistort";
+import { motion } from "motion/react";
+
+const works = [
+    {
+        role: "Full Stack Engineer",
+        company: "Callo Technologies Inc.",
+        link: {
+            url: "https://ouicall.com",
+            placeholder: "OUICALL.COM"
+        },
+        industry: "Beauty care, Booking",
+        date: "OCT 2024 - NOW",
+        responsibilities: [
+            "FRONTEND",
+            "BACKEND",
+            "PROJECT MANAGEMENT",
+            "DATABASE ENGINEERING"
+        ],
+        imagePath: "/projects/ouicall.png"
+    },
+    {
+        role: "Full Stack Engineer",
+        company: "March Resources",
+        link: {
+            url: "https://ouicall.com",
+            placeholder: "OUICALL.COM"
+        },
+        industry: "Automotive, Paints",
+        date: "NOV 2024 - MAR 2025",
+        responsibilities: [
+            "FRONTEND",
+            "BACKEND",
+            "PROJECT MANAGEMENT",
+        ],
+        imagePath: "/projects/ouicall.png"
+    },
+    {
+        role: "Software Engineer",
+        company: "ACF Solutions",
+        link: {
+            url: "https://ouicall.com",
+            placeholder: "OUICALL.COM"
+        },
+        industry: "N/A",
+        date: "NOV 2024 - MAR 2025",
+        responsibilities: [
+            "FRONTEND",
+            "BACKEND",
+            "PROJECT MANAGEMENT",
+        ],
+        imagePath: "/projects/ouicall.png"
+    }
+]
 
 export default function WorkSection() {
     const cardRefs = useRef<HTMLDivElement[]>([]);
@@ -78,122 +131,125 @@ export default function WorkSection() {
     //     })
     // }, [])
 
+    const containerVariants = {
+        rest: {
+            height: "120px",
+            marginBottom: "32px",
+            transition: { duration: 0.5, ease: "easeInOut" }
+        },
+        hover: {
+            height: "500px",
+            marginBottom: "48px",
+            transition: { duration: 0.5, ease: "easeInOut" }
+        }
+    };
+
+    const cardVariants = {
+        rest: {
+            height: "100%",
+            transition: { duration: 0.5, ease: "easeInOut" }
+        },
+        hover: {
+            height: "100%",
+            transition: { duration: 0.5, ease: "easeInOut" }
+        }
+    };
+
+    // const imageContainerVariants = {
+    //     rest: {
+    //         height: "100%",
+    //         transition: { duration: 0.5, ease: "easeInOut" }
+    //     },
+    //     hover: {
+    //         height: "100%",
+    //         transition: { duration: 0.5, ease: "easeInOut" }
+    //     }
+    // };
+
+    const detailsVariants = {
+        rest: {
+            opacity: 0,
+            y: 20,
+            transition: { duration: 0.3, ease: "easeInOut" }
+        },
+        hover: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.3, ease: "easeInOut" }
+        }
+    };
+
     return (
 
-        <div className="w-full flex flex-col px-8">
-            <h2 className="gen-sans-bold text-9xl pb-8">works</h2>
-            <div className="space-y-20">
-                <div ref={addToCardRefs} className="flex justify-between cursor-pointer">
-                    <div className="flex flex-col justify-between w-1/3">
-                        <div className="flex flex-col space-y-1">
-                            <h4 className="gen-sans-semibold text-xl">Full Stack Engineer</h4>
-                            <p className="text-md">Ouicall</p>
-                        </div>
-                        <div className="grid grid-cols-2 grid-rows-2 gap-y-8">
-                            <div className="space-y-1">
-                                <p className="text-xs text-neutral-400 font-semibold">Live Site</p>
-                                <a href="https://ouicall.com" target="_blank" className="text-sm font-semibold">OUICALL.COM</a>
+        <div className="w-full flex flex-col px-4">
+            <h2 className="gen-sans-bold text-9xl">works</h2>
+            <Separator className="mt-4 mb-4 bg-neutral-800" />
+            <div className="w-full">
+                {works.map((work, index) => (
+
+                    <motion.div
+                        whileHover="hover"
+                        initial="rest"
+                        variants={containerVariants}
+                        key={index}
+                        className="flex flex-col justify-between cursor-pointer"
+                    >
+                        <div className="flex justify-between h-full w-full">
+                            <div className="flex h-full flex-col justify-between w-1/2">
+                                <div className="flex flex-col space-y-1">
+                                    <h4 className="gen-sans-semibold text-3xl">{work.role}</h4>
+                                    <p className="text-md">{work.company}</p>
+                                </div>
+
+                                {/* Default is collapsed and hidden, show on hover */}
+                                <motion.div
+                                    variants={detailsVariants}
+                                    className="grid grid-cols-3">
+                                    <div className="col-span-2 grid grid-cols-2 grid-rows-2 gap-y-8">
+                                        <div className="space-y-1">
+                                            <p className="text-xs text-neutral-400 font-semibold">Live Site</p>
+                                            <a href={work.link.url} target="_blank" className="text-sm font-semibold">{work.link.placeholder}</a>
+                                        </div>
+                                        <div className="space-y-0.5">
+                                            <p className="text-xs text-neutral-400 font-semibold">Industry</p>
+                                            <p className="text-sm font-semibold">{work.industry}</p>
+                                        </div>
+                                        <p className="text-sm font-semibold pt-2">VIEW PROJECT</p>
+
+                                        <div className="space-y-0.5 ">
+                                            <p className="text-xs text-neutral-400 font-semibold">Date</p>
+                                            <p className="text-sm font-semibold">{work.date}</p>
+                                        </div>
+                                    </div>
+                                    {/* Default is collapsed and hidden, show on hover */}
+                                    <div
+                                        className="text-end mr-8 space-y-1"
+                                    >
+                                        <p className="text-xs text-neutral-400 font-semibold">Responsibilities</p>
+                                        <div className="text-sm font-semibold space-y-1">
+                                            {work.responsibilities.map((item) => (
+                                                <p>{item}</p>
+                                            ))}
+                                        </div>
+                                    </div>
+
+
+                                </motion.div>
                             </div>
-                            <div className="space-y-0.5">
-                                <p className="text-xs text-neutral-400 font-semibold">Industry</p>
-                                <p className="text-sm font-semibold">Beauty care, Booking</p>
-                            </div>
-                            <p className="text-sm font-semibold pt-2">VIEW PROJECT</p>
-                            {/* <p className="text-xs font-semibold"></p> */}
-
-                            <div className="space-y-0.5 ">
-                                <p className="text-xs text-neutral-400 font-semibold">Date</p>
-                                <p className="text-sm font-semibold">OCT 2024 - NOW</p>
-                            </div>
-
+                            <motion.div
+                                variants={cardVariants}
+                                className="flex items-end"
+                            >
+                                <motion.div
+                                    
+                                    className="w-[750px] h-full border border-neutral-400 rounded-lg overflow-hidden">
+                                    <Image src={work.imagePath} alt="" width={1000} height={1000} className="object-cover h-full" />
+                                </motion.div>
+                            </motion.div>
                         </div>
-                    </div>
-                    <div className="flex items-end">
-                        <div className="text-end mr-4 space-y-1">
-                            <p className="text-xs text-neutral-400 font-semibold">Responsibilities</p>
-                            <div className="text-sm font-semibold space-y-1">
-                                <p>FRONTEND</p>
-                                <p>BACKEND</p>
-                                <p>PROJECT MANAGEMENT</p>
-                                <p>DATABASE ENGINEERING</p>
-                            </div>
-                        </div>
-                        <div className="w-[750px] h-[500px] border border-neutral-400 rounded-lg overflow-hidden">
-                            
-                            <Image ref={addToImageRefs} src={"/projects/ouicall.png"} alt="" width={1000} height={1000} className="object-cover" />
-                        </div>
-                    </div>
-                </div>
-
-                <div ref={addToCardRefs} className="flex justify-between cursor-pointer">
-                    <div className="flex flex-col justify-between w-1/3">
-                        <div className="flex flex-col space-y-1">
-                            <h4 className="gen-sans-semibold text-xl">Full Stack Engineer</h4>
-                            <p className="text-md">K92</p>
-                        </div>
-                        <div className="grid grid-cols-2 grid-rows-2 gap-y-8">
-                            <div className="space-y-1">
-                                <p className="text-xs text-neutral-400 font-semibold">Live Site</p>
-                                <a href="https://k92-panel.vercel.app" target="_blank" className="text-sm font-semibold">K92-PANEL.VERCEL.APP</a>
-                            </div>
-                            <div className="space-y-0.5">
-                                <p className="text-xs text-neutral-400 font-semibold">Industry</p>
-                                <p className="text-sm font-semibold">Automotive, Paints</p>
-                            </div>
-                            <p className="text-sm font-semibold pt-2">VIEW PROJECT</p>
-                            {/* <p className="text-xs font-semibold"></p> */}
-
-                            <div className="space-y-0.5 ">
-                                <p className="text-xs text-neutral-400 font-semibold">Date</p>
-                                <p className="text-sm font-semibold">NOV 2024 - MAR 2025</p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div className="flex items-end">
-                        <div className="text-end mr-4 space-y-1">
-                            <p className="text-xs text-neutral-400 font-semibold">Responsibilities</p>
-                            <div className="text-sm font-semibold space-y-1">
-                                <p>WEB DEVELOPMENT</p>
-                                <p>BACKEND</p>
-                                <p>PROJECT MANAGEMENT</p>
-                                <p>DATABASE ENGINEERING</p>
-                            </div>
-                        </div>
-                        <div className="w-[750px] h-[500px] border border-neutral-400 rounded-lg overflow-hidden">
-                            
-                            <Image ref={addToImageRefs} src={"/projects/ouicall.png"} alt="" width={1000} height={1000} className="object-cover" />
-                        </div>
-                    </div>
-                </div>
-
-                {/* <div ref={addToCardRefs} className="flex py-4 justify-between cursor-pointer">
-                    <div className="flex flex-col">
-                        <h4 className="gen-sans-semibold text-5xl mb-3">Full Stack Engineer</h4>
-                        <p className="text-md">K92 Keema</p>
-                        <p className="text-md">nov 2024 — mar 2025</p>
-                    </div>
-                    <Image ref={addToImageRefs} src={"/projects/PCTC.png"} alt="" width={1000} height={1000} className="w-[750px] h-[400px] rounded-md object-cover border border-neutral-200" />
-                </div> */}
-
-                <div ref={addToCardRefs} className="flex py-4 justify-between cursor-pointer">
-                    <div className="flex flex-col">
-                        <h4 className="gen-sans-semibold text-5xl mb-3">Software Engineer</h4>
-                        <p className="text-md">ACF Solutions</p>
-                        <p className="text-md">may 2024 — oct 2024</p>
-                    </div>
-                    <Image ref={addToImageRefs} src={"/projects/PCTC.png"} alt="" width={1000} height={1000} className="w-[750px] h-[400px] rounded-md object-cover border border-neutral-200" />
-                </div>
-
-
-                <div ref={addToCardRefs} className="flex py-4 justify-between cursor-pointer">
-                    <div className="flex flex-col">
-                        <h4 className="gen-sans-semibold text-5xl mb-3">Software Engineer Intern</h4>
-                        <p className="text-md">Department of Information, Communications and Technology</p>
-                        <p className="text-md">jun 2024 — aug 2024</p>
-                    </div>
-                    <Image ref={addToImageRefs} src={"/projects/PCTC.png"} alt="" width={1000} height={1000} className="w-[750px] h-[400px] rounded-md object-cover border border-neutral-200" />
-                </div>
+                        <Separator className="bg-neutral-400 mt-4"/>
+                    </motion.div>
+                ))}
             </div>
         </div>
     )

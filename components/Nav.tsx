@@ -4,9 +4,11 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from 'motion/react';
 import Hamburger from "./ui/hamburger";
+import { useState } from "react";
 
 export default function Nav() {
     const router = useRouter()
+    const [isMenuOpen, setIsMenuOpen] = useState()
 
     return (
         <div className="flex justify-between w-full absolute top-0 z-[999] mix-blend-difference text-white sticky px-2 sm:px-4 pt-2 gen-sans-bold">
@@ -20,6 +22,8 @@ export default function Nav() {
             <div onClick={() => router.push("/cv")} className="hidden sm:flex hover:text-neutral-500 transition ease cursor-pointer">check my cv</div>
 
             <Hamburger className="sm:hidden z-[999]" />
+
+            
         </div>
     )
 }
