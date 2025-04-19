@@ -12,7 +12,8 @@ const works = [
         company: "Callo Technologies Inc.",
         link: {
             url: "https://ouicall.com",
-            placeholder: "OUICALL.COM"
+            placeholder: "OUICALL.COM",
+            enable: true
         },
         industry: "Beauty care, Booking",
         date: "OCT 2024 - NOW",
@@ -22,14 +23,21 @@ const works = [
             "PROJECT MANAGEMENT",
             "DATABASE ENGINEERING"
         ],
+        technologies: [
+            "NEXT.js",
+            "NEST.js",
+            "POSTGRESQL",
+            "DRIZZLE"
+        ],
         imagePath: "/projects/ouicall.png"
     },
     {
         role: "Full Stack Engineer",
         company: "March Resources",
         link: {
-            url: "https://ouicall.com",
-            placeholder: "OUICALL.COM"
+            url: "N/A",
+            placeholder: "OUICALL.COM",
+            enable: false
         },
         industry: "Automotive, Paints",
         date: "NOV 2024 - MAR 2025",
@@ -38,11 +46,40 @@ const works = [
             "BACKEND",
             "PROJECT MANAGEMENT",
         ],
+        technologies: [
+            "NEXT.js",
+            "NEST.js",
+            "POSTGRESQL",
+            "MIKRO-ORM"
+        ],
         imagePath: "/projects/ouicall.png"
     },
     {
         role: "Software Engineer",
         company: "ACF Solutions",
+        link: {
+            url: "N/A",
+            placeholder: "N/A",
+            enable: false
+        },
+        industry: "N/A",
+        date: "NOV 2024 - MAR 2025",
+        responsibilities: [
+            "MOBILE DEVELOPMENT",
+            "UI/UX DESIGN (MOBILE)",
+            "FRONTEND",
+        ],
+        technologies: [
+            "FLUTTER",
+            "POSTMAN",
+            // "POSTGRESQL",
+            // "DRIZZLE"
+        ],
+        imagePath: "/projects/ouicall.png"
+    },
+    {
+        role: "Software Engineer Intern",
+        company: "Department of Information and Communications Technology",
         link: {
             url: "https://ouicall.com",
             placeholder: "OUICALL.COM"
@@ -52,7 +89,12 @@ const works = [
         responsibilities: [
             "FRONTEND",
             "BACKEND",
-            "PROJECT MANAGEMENT",
+            "UI/UX",
+        ],
+        technologies: [
+            "NEXT.js",
+            ".NET MVC",
+            "MYSQL",
         ],
         imagePath: "/projects/ouicall.png"
     }
@@ -182,17 +224,17 @@ export default function WorkSection() {
     return (
 
         <div className="w-full flex flex-col px-4">
-            <h2 className="gen-sans-bold text-9xl">works</h2>
+            <h2 className="gen-sans-bold text-9xl">experience</h2>
             <Separator className="mt-4 mb-4 bg-neutral-800" />
             <div className="w-full">
                 {works.map((work, index) => (
 
                     <motion.div
-                        whileHover="hover"
-                        initial="rest"
+                        // whileHover="hover"
+                        initial="hover"
                         variants={containerVariants}
                         key={index}
-                        className="flex flex-col justify-between cursor-pointer"
+                        className="flex flex-col justify-between"
                     >
                         <div className="flex justify-between h-full w-full">
                             <div className="flex h-full flex-col justify-between w-1/2">
@@ -205,7 +247,8 @@ export default function WorkSection() {
                                 <motion.div
                                     variants={detailsVariants}
                                     className="grid grid-cols-3">
-                                    <div className="col-span-2 grid grid-cols-2 grid-rows-2 gap-y-8">
+
+                                    {/* <div className="col-span-2 grid grid-cols-2 grid-rows-2 gap-y-8">
                                         <div className="space-y-1">
                                             <p className="text-xs text-neutral-400 font-semibold">Live Site</p>
                                             <a href={work.link.url} target="_blank" className="text-sm font-semibold">{work.link.placeholder}</a>
@@ -220,8 +263,21 @@ export default function WorkSection() {
                                             <p className="text-xs text-neutral-400 font-semibold">Date</p>
                                             <p className="text-sm font-semibold">{work.date}</p>
                                         </div>
-                                    </div>
+                                    </div> */}
                                     {/* Default is collapsed and hidden, show on hover */}
+                                    <div className="space-y-0.5 ">
+                                        <p className="text-xs text-neutral-400 font-semibold">Date</p>
+                                        <p className="text-sm font-semibold">{work.date}</p>
+                                    </div>
+                                    <div className="space-y-0.5 ">
+                                        <p className="text-xs text-neutral-400 font-semibold">Technology</p>
+                                        {/* <p className="text-sm font-semibold">{work.date}</p> */}
+                                        <div className="text-sm font-semibold space-y-1">
+                                            {work.technologies.map((item) => (
+                                                <p>{item}</p>
+                                            ))}
+                                        </div>
+                                    </div>
                                     <div
                                         className="text-end mr-8 space-y-1"
                                     >
@@ -241,13 +297,13 @@ export default function WorkSection() {
                                 className="flex items-end"
                             >
                                 <motion.div
-                                    
+
                                     className="w-[750px] h-full border border-neutral-400 rounded-lg overflow-hidden">
                                     <Image src={work.imagePath} alt="" width={1000} height={1000} className="object-cover h-full" />
                                 </motion.div>
                             </motion.div>
                         </div>
-                        <Separator className="bg-neutral-400 mt-4"/>
+                        <Separator className="bg-neutral-400 mt-4" />
                     </motion.div>
                 ))}
             </div>
