@@ -96,7 +96,7 @@ const works = [
             ".NET MVC",
             "MYSQL",
         ],
-        imagePath: "/projects/ouicall.png"
+        imagePath: "/projects/goverify.png"
     }
 ]
 
@@ -197,16 +197,16 @@ export default function WorkSection() {
         }
     };
 
-    // const imageContainerVariants = {
-    //     rest: {
-    //         height: "100%",
-    //         transition: { duration: 0.5, ease: "easeInOut" }
-    //     },
-    //     hover: {
-    //         height: "100%",
-    //         transition: { duration: 0.5, ease: "easeInOut" }
-    //     }
-    // };
+    const imageContainerVariants = {
+        rest: {
+            height: "100%",
+            transition: { duration: 0.5, ease: "easeInOut" }
+        },
+        hover: {
+            height: "100%",
+            transition: { duration: 0.5, ease: "easeInOut" }
+        }
+    };
 
     const detailsVariants = {
         rest: {
@@ -224,7 +224,7 @@ export default function WorkSection() {
     return (
 
         <div className="w-full flex flex-col px-4">
-            <h2 className="gen-sans-bold text-9xl">experience</h2>
+            <h2 className="gen-sans-bold text-9xl">work experience</h2>
             <Separator className="mt-4 mb-4 bg-neutral-800" />
             <div className="w-full">
                 {works.map((work, index) => (
@@ -298,7 +298,7 @@ export default function WorkSection() {
                             >
                                 <motion.div
 
-                                    className="w-[750px] h-full border border-neutral-400 rounded-lg overflow-hidden">
+                                    className="w-[750px] h-full shadow-md rounded-lg overflow-hidden">
                                     <Image src={work.imagePath} alt="" width={1000} height={1000} className="object-cover h-full" />
                                 </motion.div>
                             </motion.div>
