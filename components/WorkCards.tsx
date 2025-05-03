@@ -130,6 +130,8 @@ export default function WorkSection() {
     const handleMove = (e: MouseEvent<HTMLDivElement>) => {
         const { clientX, clientY } = e;
 
+        console.log(clientX, clientY)
+
         imagePos.x.set(clientX);
         imagePos.y.set(clientY);
     }
@@ -137,15 +139,52 @@ export default function WorkSection() {
     gsap.registerPlugin(ScrollTrigger)
     // const workRef = useRef<HTMLDivElement>(null)
 
+    const cardVariants = {
+        rest: {
+            backgroundColor: "#ffffff",
+            color: "#1b1b1b",
+            transition: { duration: 0.1, ease: "easeInOut" }
+        },
+        hover: {
+            backgroundColor: "#1b1b1b",
+            color: "#ffffff",
+            transition: { duration: 0.1, ease: "easeInOut" }
+        }
+    };
+
+    const roleVariants = {
+        rest: {
+            x: 0,
+            transition: { duration: 0.3, ease: "easeInOut" }
+        },
+        hover: {
+            x: 20,
+            transition: { duration: 0.3, ease: "easeInOut" }
+        }
+    }
+
+    const companyVariants = {
+        rest: {
+            x: 0,
+            transition: { duration: 0.3, ease: "easeInOut" }
+        },
+        hover: {
+            x: 20,
+            transition: { duration: 0.3, ease: "easeInOut" }
+        }
+    }
+
     return (
 
-        <div className="w-full flex flex-col px-4">
-            <h2 className="gen-sans-bold text-9xl">work experience</h2>
+        <div className="w-full flex flex-col">
+            <h2 className="gen-sans-bold text-9xl px-4">work experience</h2>
             <Separator className="mt-4 bg-neutral-800" />
             <div className="w-full relative" onMouseMove={handleMove}>
                 {works.map((work, index) => (
-                    <div
+                    <motion.div
                         key={index}
+                        initial="rest"
+                        whileHover="hover"
                         className="hover-card"
                         onMouseEnter={() => setImg({
                             src: work.imagePath.src,
@@ -160,12 +199,12 @@ export default function WorkSection() {
                         })}
 
                     >
-                        <div className=" py-4">
-                            <p className="text-5xl font-bold">{work.role}</p>
-                            <p>{work.company}</p>
-                        </div>
-                        <Separator className="bg-neutral-400" />
-                    </div>
+                        <motion.div variants={cardVariants} className="py-6 px-4">
+                            <motion.p variants={roleVariants} className="text-5xl font-bold">{work.role}</motion.p>
+                            <motion.p variants={companyVariants}>{work.company}</motion.p>
+                        </motion.div>
+                        <Separator className="bg-[#1b1b1b] " />
+                    </motion.div>
 
                 ))}
 
@@ -173,11 +212,11 @@ export default function WorkSection() {
                     style={{
                         y: imagePos.y,
                         x: imagePos.x,
-                        opacity: img.opacity
+                        opacity: img.opacity,
+                        
                     }}
                     className="hover-image"
                 >
-
                     <Image
                         src={img.src}
                         alt={`${img.alt} project`}

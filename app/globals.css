@@ -227,9 +227,9 @@ body {
 .hover-image{
   width: 400px;
   height: 300px;
-  position: absolute;
-  top: -50%;
-  left: -15%;
+  position: fixed;
+  top: -150px;
+  left: -200px;
   transition: opacity 200ms ease-in-out;
   object-position: center;
   pointer-events: none;

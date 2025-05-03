@@ -53,7 +53,7 @@ export default function Page() {
                                 <ul className="text-sm list-disc ml-4">
                                     <li>1.39 GPA / 96% GWA</li>
                                     <li>Full Government Scholar</li>
-                                    <li>6x Dean's List awardee</li>
+                                    <li>6x Dean&apos;s List awardee</li>
                                 </ul>
                             </div>
                         </TextFade>
