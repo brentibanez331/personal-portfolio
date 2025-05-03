@@ -1,10 +1,16 @@
 import Image from "next/image";
 import { Separator } from "./ui/separator";
-import { useEffect, useRef } from "react";
+import { MouseEvent, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ImageDistort from "./ImageDistort";
-import { motion } from "motion/react";
+import { motion, useSpring } from "motion/react";
+
+
+import ouicall from "./../public/projects/ouicall.png";
+import goverify from "./../public/projects/goverify.png";
+import { spring } from "motion";
+
 
 const works = [
     {
@@ -29,7 +35,7 @@ const works = [
             "POSTGRESQL",
             "DRIZZLE"
         ],
-        imagePath: "/projects/ouicall.png"
+        imagePath: ouicall
     },
     {
         role: "Full Stack Engineer",
@@ -52,7 +58,7 @@ const works = [
             "POSTGRESQL",
             "MIKRO-ORM"
         ],
-        imagePath: "/projects/ouicall.png"
+        imagePath: ouicall
     },
     {
         role: "Software Engineer",
@@ -75,7 +81,7 @@ const works = [
             // "POSTGRESQL",
             // "DRIZZLE"
         ],
-        imagePath: "/projects/ouicall.png"
+        imagePath: ouicall
     },
     {
         role: "Software Engineer Intern",
@@ -96,140 +102,101 @@ const works = [
             ".NET MVC",
             "MYSQL",
         ],
-        imagePath: "/projects/goverify.png"
+        imagePath: goverify
     }
 ]
 
 export default function WorkSection() {
     const cardRefs = useRef<HTMLDivElement[]>([]);
     const imageRefs = useRef<HTMLImageElement[]>([]);
+
+    const [img, setImg] = useState({
+        src: "",
+        alt: "",
+        opacity: 0
+    })
+
+    const spring = {
+        stiffness: 150,
+        damping: 15,
+        mass: 0.1
+    }
+
+    const imagePos = {
+        x: useSpring(0, spring),
+        y: useSpring(0, spring)
+    }
+
+    const handleMove = (e: MouseEvent<HTMLDivElement>) => {
+        const { clientX, clientY } = e;
+
+        imagePos.x.set(clientX);
+        imagePos.y.set(clientY);
+    }
+
     gsap.registerPlugin(ScrollTrigger)
     // const workRef = useRef<HTMLDivElement>(null)
-
-    cardRefs.current = [];
-    imageRefs.current = [];
-
-    const addToCardRefs = (el: HTMLDivElement) => {
-        if (el && !cardRefs.current.includes(el)) {
-            cardRefs.current.push(el);
-        }
-    };
-
-    const addToImageRefs = (el: HTMLImageElement) => {
-        if (el && !imageRefs.current.includes(el)) {
-            imageRefs.current.push(el);
-        }
-    };
-
-    // useEffect(() => {
-    //     const ctx = gsap.to('body', {
-    //         backgroundColor: '#1A1A1A', // Target white background
-    //         color: '#ffffff',
-    //         scrollTrigger: {
-    //             trigger: workRef.current,
-    //             start: 'top 80%', // Start transition when top of work section is 80% from the top of viewport
-    //             end: 'top 20%', // Complete transition when top of work section is 20% from the top
-    //             scrub: true, // Smooth animation that ties to scroll position
-    //             markers: false, // Only show markers in development
-    //         }
-    //     });
-
-    //     return () => {
-    //         ctx.revert()
-
-    //         gsap.set('body', {
-    //             backgroundColor: '',
-    //             color: ''
-    //         });
-    //     }
-    // }, [workRef])
-
-    // useEffect(() => {
-    //     cardRefs.current.forEach((card, index) => {
-    //         const nextCard = cardRefs.current[index + 1];
-
-    //         gsap.to(card, {
-    //             scrollTrigger: {
-    //                 trigger: card,
-    //                 start: `top bottom-=100`,
-    //                 end: `top top+=40`,
-    //                 scrub: true,
-    //                 markers: true,
-    //                 invalidateOnRefresh: true
-    //             },
-
-    //         })
-
-    //         ScrollTrigger.create({
-    //             trigger: card,
-    //             start: "top top",
-    //             pin: true,
-    //             pinSpacing: false,
-    //             markers: true,
-    //             id: 'pin',
-    //             end: nextCard ? "top" : "bottom top",
-    //             invalidateOnRefresh: true,
-    //         });
-    //     })
-    // }, [])
-
-    const containerVariants = {
-        rest: {
-            height: "120px",
-            marginBottom: "32px",
-            transition: { duration: 0.5, ease: "easeInOut" }
-        },
-        hover: {
-            height: "500px",
-            marginBottom: "48px",
-            transition: { duration: 0.5, ease: "easeInOut" }
-        }
-    };
-
-    const cardVariants = {
-        rest: {
-            height: "100%",
-            transition: { duration: 0.5, ease: "easeInOut" }
-        },
-        hover: {
-            height: "100%",
-            transition: { duration: 0.5, ease: "easeInOut" }
-        }
-    };
-
-    const imageContainerVariants = {
-        rest: {
-            height: "100%",
-            transition: { duration: 0.5, ease: "easeInOut" }
-        },
-        hover: {
-            height: "100%",
-            transition: { duration: 0.5, ease: "easeInOut" }
-        }
-    };
-
-    const detailsVariants = {
-        rest: {
-            opacity: 0,
-            y: 20,
-            transition: { duration: 0.3, ease: "easeInOut" }
-        },
-        hover: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.3, ease: "easeInOut" }
-        }
-    };
 
     return (
 
         <div className="w-full flex flex-col px-4">
             <h2 className="gen-sans-bold text-9xl">work experience</h2>
-            <Separator className="mt-4 mb-4 bg-neutral-800" />
-            <div className="w-full">
+            <Separator className="mt-4 bg-neutral-800" />
+            <div className="w-full relative" onMouseMove={handleMove}>
                 {works.map((work, index) => (
+                    <div
+                        key={index}
+                        className="hover-card"
+                        onMouseEnter={() => setImg({
+                            src: work.imagePath.src,
+                            alt: `${work.company} image`,
+                            opacity: 1
+                        })}
 
-                    <motion.div
+                        onMouseLeave={() => setImg({
+                            src: img.src,
+                            alt: img.alt,
+                            opacity: 0
+                        })}
+
+                    >
+                        <div className=" py-4">
+                            <p className="text-5xl font-bold">{work.role}</p>
+                            <p>{work.company}</p>
+                        </div>
+                        <Separator className="bg-neutral-400" />
+                    </div>
+
+                ))}
+
+                <motion.div
+                    style={{
+                        y: imagePos.y,
+                        x: imagePos.x,
+                        opacity: img.opacity
+                    }}
+                    className="hover-image"
+                >
+
+                    <Image
+                        src={img.src}
+                        alt={`${img.alt} project`}
+                        width={500}
+                        height={500}
+                        className=""
+                    />
+
+                    {/* )} */}
+
+                </motion.div>
+
+            </div>
+
+        </div>
+    )
+}
+
+{/* <motion.div
                         // whileHover="hover"
                         initial="hover"
                         variants={containerVariants}
@@ -243,12 +210,12 @@ export default function WorkSection() {
                                     <p className="text-md">{work.company}</p>
                                 </div>
 
-                                {/* Default is collapsed and hidden, show on hover */}
+                                Default is collapsed and hidden, show on hover
                                 <motion.div
                                     variants={detailsVariants}
                                     className="grid grid-cols-3">
 
-                                    {/* <div className="col-span-2 grid grid-cols-2 grid-rows-2 gap-y-8">
+                                    <div className="col-span-2 grid grid-cols-2 grid-rows-2 gap-y-8">
                                         <div className="space-y-1">
                                             <p className="text-xs text-neutral-400 font-semibold">Live Site</p>
                                             <a href={work.link.url} target="_blank" className="text-sm font-semibold">{work.link.placeholder}</a>
@@ -263,15 +230,15 @@ export default function WorkSection() {
                                             <p className="text-xs text-neutral-400 font-semibold">Date</p>
                                             <p className="text-sm font-semibold">{work.date}</p>
                                         </div>
-                                    </div> */}
-                                    {/* Default is collapsed and hidden, show on hover */}
+                                    </div>
+                                    
                                     <div className="space-y-0.5 ">
                                         <p className="text-xs text-neutral-400 font-semibold">Date</p>
                                         <p className="text-sm font-semibold">{work.date}</p>
                                     </div>
                                     <div className="space-y-0.5 ">
                                         <p className="text-xs text-neutral-400 font-semibold">Technology</p>
-                                        {/* <p className="text-sm font-semibold">{work.date}</p> */}
+                                        <p className="text-sm font-semibold">{work.date}</p>
                                         <div className="text-sm font-semibold space-y-1">
                                             {work.technologies.map((item) => (
                                                 <p>{item}</p>
@@ -304,9 +271,4 @@ export default function WorkSection() {
                             </motion.div>
                         </div>
                         <Separator className="bg-neutral-400 mt-4" />
-                    </motion.div>
-                ))}
-            </div>
-        </div>
-    )
-}
+                    </motion.div> */}

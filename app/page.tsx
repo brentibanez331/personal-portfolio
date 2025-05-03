@@ -88,8 +88,8 @@ export default function Page() {
     if (!containerRef.current || !imageRef.current) return;
 
     
-    console.log("Container: ", containerRef.current)
-    console.log("Image: ", imageRef.current)
+    // console.log("Container: ", containerRef.current)
+    // console.log("Image: ", imageRef.current)
 
     const scene = new THREE.Scene()
 
@@ -105,13 +105,12 @@ export default function Page() {
 
     if (imageRef.current)
       texture = new THREE.TextureLoader().load(imageRef.current?.src)
-    console.log(texture)
 
     const aspectRatio = initialWidth! / initialHeight!;
 
-    console.log("WIDTH: ", initialWidth)
-    console.log("HEIGHT: ", initialHeight)
-    console.log("ASPECT RATIO: ", aspectRatio);
+    // console.log("WIDTH: ", initialWidth)
+    // console.log("HEIGHT: ", initialHeight)
+    // console.log("ASPECT RATIO: ", aspectRatio);
 
 
     let shaderUniforms = {
