@@ -182,6 +182,7 @@ export default function WorkSection() {
             <h2 className="gen-sans-bold text-9xl px-4">work experience</h2>
             <Separator className="mt-4 bg-neutral-800" />
             <div className="w-full relative" onMouseMove={handleMove}>
+                
                 {works.map((work, index) => (
                     <motion.div
                         key={index}
@@ -201,11 +202,11 @@ export default function WorkSection() {
                         })}
 
                     >
-                        <motion.div variants={cardVariants} className="py-6 px-4">
+                        <motion.div variants={cardVariants} className="py-6 px-4 border-b border-neutral-900">
                             <motion.p variants={roleVariants} className="text-5xl font-bold">{work.role}</motion.p>
                             <motion.p variants={companyVariants}>{work.company}</motion.p>
                         </motion.div>
-                        <Separator className="bg-[#1b1b1b] " />
+                        {/* <Separator className="bg-[#1b1b1b] " /> */}
                     </motion.div>
 
                 ))}
@@ -226,9 +227,6 @@ export default function WorkSection() {
                         height={500}
                         className=""
                     />
-
-                    {/* )} */}
-
                 </motion.div>
 
             </div>
