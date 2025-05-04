@@ -1,14 +1,13 @@
 "use client"
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
-import * as THREE from 'three'
 import Nav from "@/components/Nav";
+import * as THREE from 'three'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useScramble } from "use-scramble";
 import { Separator } from "@/components/ui/separator"
 import Image from "next/image";
-import Lenis from "lenis"
 import WorkSection from "@/components/WorkCards";
 import About from "@/components/About";
 
@@ -73,105 +72,111 @@ const fragmentShader = `
 export default function Page() {
   const containerRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLImageElement>(null)
-  gsap.registerPlugin(ScrollTrigger)
-  const lenis = new Lenis()
 
-  lenis.on('scroll', ScrollTrigger.update)
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000)
-  })
-
-  gsap.ticker.lagSmoothing(0);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+  }, [])
 
 
-  useLayoutEffect(() => {
-    if (!containerRef.current || !imageRef.current) return;
+  useEffect(() => {
+    const initializeClientSideLibraries = async () => {
+      // const THREE = await import('three')
+      const Lenis = (await import('lenis')).default
 
-    
-    // console.log("Container: ", containerRef.current)
-    // console.log("Image: ", imageRef.current)
+      const lenis = new Lenis();
 
-    const scene = new THREE.Scene()
+      lenis.on('scroll', ScrollTrigger.update)
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000)
+      })
+      gsap.ticker.lagSmoothing(0);
 
-    const initialWidth = imageRef.current?.offsetWidth;
-    const initialHeight = imageRef.current?.offsetHeight;
+      if (!containerRef.current || !imageRef.current) return;
 
-    if(initialHeight === 0 || initialWidth === 0) return;
+      const scene = new THREE.Scene()
 
-    const camera = new THREE.PerspectiveCamera(90, initialWidth! / initialHeight!, 0.01, 10)
-    camera.position.z = 1;
+      const initialWidth = imageRef.current?.offsetWidth;
+      const initialHeight = imageRef.current?.offsetHeight;
 
-    let texture: THREE.Texture = new THREE.Texture();
+      if (initialHeight === 0 || initialWidth === 0) return;
 
-    if (imageRef.current)
-      texture = new THREE.TextureLoader().load(imageRef.current?.src)
+      const camera = new THREE.PerspectiveCamera(90, initialWidth! / initialHeight!, 0.01, 10)
+      camera.position.z = 1;
 
-    const aspectRatio = initialWidth! / initialHeight!;
+      let texture: THREE.Texture = new THREE.Texture();
 
-    // console.log("WIDTH: ", initialWidth)
-    // console.log("HEIGHT: ", initialHeight)
-    // console.log("ASPECT RATIO: ", aspectRatio);
+      if (imageRef.current)
+        texture = new THREE.TextureLoader().load(imageRef.current?.src)
 
+      const aspectRatio = initialWidth! / initialHeight!;
 
-    let shaderUniforms = {
-      u_mouse: { type: 'v2', value: new THREE.Vector2() },
-      u_prevMouse: { type: 'v2', value: new THREE.Vector2() },
-      u_aberrationIntensity: { type: 'f', value: 0.0 },
-      u_texture: { type: 't', value: texture },
-      u_aspectRatio: { type: 'f', value: aspectRatio }
-    }
+      // console.log("WIDTH: ", initialWidth)
+      // console.log("HEIGHT: ", initialHeight)
+      // console.log("ASPECT RATIO: ", aspectRatio);
 
 
-    const planeMesh = new THREE.Mesh(new THREE.PlaneGeometry(aspectRatio * 2, 2), new THREE.ShaderMaterial({
-      uniforms: shaderUniforms,
-      vertexShader,
-      fragmentShader
-    }))
-
-    scene.add(planeMesh)
-
-    const renderer = new THREE.WebGLRenderer()
-    renderer.setSize(initialWidth!, initialHeight!)
-
-    containerRef.current?.appendChild(renderer.domElement)
-
-    const animate = () => {
-      requestAnimationFrame(animate);
-
-      mousePosition.x += (targetMousePosition.x - mousePosition.x) * easeFactor;
-      mousePosition.y += (targetMousePosition.y - mousePosition.y) * easeFactor;
-
-      planeMesh.material.uniforms.u_mouse.value.set(
-        mousePosition.x,
-        1.0 - mousePosition.y
-      )
-
-      planeMesh.material.uniforms.u_prevMouse.value.set(
-        prevPosition.x,
-        1.0 - prevPosition.y
-      )
-
-      aberrationIntensity = Math.max(0.0, aberrationIntensity - 0.05)
-
-      planeMesh.material.uniforms.u_aberrationIntensity.value = aberrationIntensity;
-      renderer.render(scene, camera)
-    }
-
-    animate()
-
-    containerRef.current?.addEventListener("mousemove", handleMouseMove)
-    containerRef.current?.addEventListener("mouseenter", handleMouseEnter)
-    containerRef.current?.addEventListener("mouseleave", handleMouseLeave)
-
-    return () => {
-      renderer.dispose();
-      if (containerRef.current && renderer.domElement) {
-        containerRef.current.removeChild(renderer.domElement)
+      let shaderUniforms = {
+        u_mouse: { type: 'v2', value: new THREE.Vector2() },
+        u_prevMouse: { type: 'v2', value: new THREE.Vector2() },
+        u_aberrationIntensity: { type: 'f', value: 0.0 },
+        u_texture: { type: 't', value: texture },
+        u_aspectRatio: { type: 'f', value: aspectRatio }
       }
 
 
+      const planeMesh = new THREE.Mesh(new THREE.PlaneGeometry(aspectRatio * 2, 2), new THREE.ShaderMaterial({
+        uniforms: shaderUniforms,
+        vertexShader,
+        fragmentShader
+      }))
+
+      scene.add(planeMesh)
+
+      const renderer = new THREE.WebGLRenderer()
+      renderer.setSize(initialWidth!, initialHeight!)
+
+      containerRef.current?.appendChild(renderer.domElement)
+
+      const animate = () => {
+        requestAnimationFrame(animate);
+
+        mousePosition.x += (targetMousePosition.x - mousePosition.x) * easeFactor;
+        mousePosition.y += (targetMousePosition.y - mousePosition.y) * easeFactor;
+
+        planeMesh.material.uniforms.u_mouse.value.set(
+          mousePosition.x,
+          1.0 - mousePosition.y
+        )
+
+        planeMesh.material.uniforms.u_prevMouse.value.set(
+          prevPosition.x,
+          1.0 - prevPosition.y
+        )
+
+        aberrationIntensity = Math.max(0.0, aberrationIntensity - 0.05)
+
+        planeMesh.material.uniforms.u_aberrationIntensity.value = aberrationIntensity;
+        renderer.render(scene, camera)
+      }
+
+      animate()
+
+      containerRef.current?.addEventListener("mousemove", handleMouseMove)
+      containerRef.current?.addEventListener("mouseenter", handleMouseEnter)
+      containerRef.current?.addEventListener("mouseleave", handleMouseLeave)
+
+      return () => {
+        renderer.dispose();
+        if (containerRef.current && renderer.domElement) {
+          containerRef.current.removeChild(renderer.domElement)
+        }
+
+
+      }
     }
-  }, [containerRef.current, imageRef.current])
+
+    initializeClientSideLibraries();
+  }, [])
 
   const handleMouseMove = (event: MouseEvent) => {
     easeFactor = 0.02;
@@ -231,7 +236,7 @@ export default function Page() {
         </div>
       </div>
 
-      <About/>
+      <About />
 
       <WorkSection />
 

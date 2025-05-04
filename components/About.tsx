@@ -1,3 +1,4 @@
+'use client'
 import { cn } from "@/lib/utils";
 import { useInView, motion } from "motion/react";
 import { useRef } from "react";

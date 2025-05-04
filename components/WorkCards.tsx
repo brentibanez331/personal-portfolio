@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 import { Separator } from "./ui/separator";
 import { MouseEvent, useEffect, useRef, useState } from "react";
