@@ -5,12 +5,12 @@ import { useRef } from "react";
 
 export default function About() {
     return (
-        <div className="h-screen mx-4">
+        <div className="h-screen mx-4 mt-20">
             <WordsPullUp
-                text="A Full Stack Engineer driving innovative and secure web solutions at Ouicall, based in the Philippines."
+                text="Award-winning Full Stack Engineer with proven expertise in software development, leadership, and innovation. Currently building impactful solutions in the startup ecosystem with a strong foundation of hackathon victories and academic excellence."
                 className=""
-                maxWidth="lg" // You can use 'sm', 'md', 'lg', 'xl', etc.
-                boldWords={["Full Stack Engineer", "innovative", "secure", "Ouicall,"]} 
+                maxWidth="xl" // You can use 'sm', 'md', 'lg', 'xl', etc.
+                boldWords={["Full Stack Engineer", "innovation", "impactful", "Ouicall,"]} 
             />
         </div>
     )
@@ -34,7 +34,7 @@ const WordsPullUp = ({
             y: 0,
             opacity: 1,
             transition: {
-                delay: i * 0.1,
+                delay: i * 0.05,
             },
         }),
     };

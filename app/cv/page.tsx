@@ -51,6 +51,7 @@ export default function Page() {
                                 <p className="text-xs sm:text-sm text-neutral-600">2021 - 2025</p>
                                 <p className="italic">University of St. La Salle - PH</p>
                                 <div className="text-sm ml-2 mt-2">
+                                    <p>— <span className="font-bold">Summa Cum Laude</span></p>
                                     <p>— 1.4 GPA / 96% GWA</p>
                                     <p>— Full Government Scholar</p>
                                     <p>— <b>8x</b> Dean&apos;s List awardee</p>
@@ -58,56 +59,26 @@ export default function Page() {
                             </div>
                         </TextFade>
 
-                        <TextFade direction="up" className=" space-y-4 sm:space-y-8 col-span-2">
-                            <h4 className="gen-sans-bold text-3xl">Leadership Experience</h4>
-                            <div>
-                                <p className="font-semibold">Academic Affairs Head</p>
-                                <p className="text-xs sm:text-sm text-neutral-600">August 2024 - May 2025</p>
-                                <p className="italic">Computer Science Society - USLS</p>
-                                <div className="text-sm mt-1 ml-2 text-neutral-600">
-                                    <p>— Spearheaded a partnership with Datacamp, providing 50+ students with free data science courses</p>
-                                    <p>— Organized a mentorship program, training 30+ freshmen students with C++ programming</p>
-                                    <p>— Co-facilitated Game Jam Events; Re:Play & Let's G!!!</p>
-                                </div>
-                            </div>
-                            <div>
-                                <p className="font-semibold">Student Mentor</p>
-                                <p className="text-xs sm:text-sm text-neutral-600">September 2024 - November 2024</p>
-                                <p className="italic">Computer Science Society - USLS</p>
-                                <div className="text-sm mt-1 ml-2 text-neutral-600">
-                                    <p>— Spearheaded a partnership with Datacamp, providing 50+ students with free data science courses</p>
-                                    <p>— Organized a mentorship program, training 30+ freshmen students with C++ programming</p>
-                                    <p>— Co-facilitated Game Jam Events; Re:Play & Let's G!!!</p>
-                                </div>
-                            </div>
-                            <div>
-                                <p className="font-semibold">VP for Programs</p>
-                                <p className="text-xs sm:text-sm text-neutral-600">February 2024 - September 2024</p>
-                                <p className="italic">Developers Connect (DEVCON) Bacolod</p>
-                                <div className="text-sm mt-1 ml-2 text-neutral-600">
-                                    <p>— Co-organized a 2-day workshop on data science with SAP tools, reaching over 300+ students across 2 universities</p>
-                                    <p>— Led an outreach program in partnership with a local non-profit organization</p>
-                                </div>
-                            </div>
-                            <div>
-                                <p className="font-semibold">Chief Information Officer</p>
-                                <p className="text-xs sm:text-sm text-neutral-600">August 2023 - May 2024</p>
-                                <p className="italic">Google Developer Student Clubs - USLS</p>
-                                <div className="text-sm mt-1 ml-2 text-neutral-600">
-                                    <p>— Co-facilitated a Datacamp partnership and managing scholars</p>
-                                    <p>— Awarded as Best Special Interest Club 2024 @ Corps de Elite USLS</p>
-                                </div>
-                            </div>
-                        </TextFade>
                         <TextFade direction="up" className="col-span-2 space-y-8">
                             <h4 className="gen-sans-bold text-3xl">Awards</h4>
+                            <div>
+                                <p className="font-semibold">CS Gala: The Turing Honors</p>
+                                <p className="text-xs sm:text-sm text-neutral-600">2025</p>
+                                <p className="italic">University of St. La Salle, Bacolod</p>
+                                <div className="text-sm ml-2 mt-1 text-neutral-600">
+                                    <p className="font-semibold">🏆 Magna Computatorem (Most Outstanding Computer Science Student)</p>
+                                    <p>🏆 Most Outstanding in Software Development </p>
+                                    <p>🏆 Most Outstanding Portfolio </p>
+                                    <p>🏅 Distinguished Service Award </p>
+                                </div>
+                            </div>
                             <div>
                                 <p className="font-semibold">Senior's Recognition Rites</p>
                                 <p className="text-xs sm:text-sm text-neutral-600">2025</p>
                                 <p className="italic">University of St. La Salle, Bacolod</p>
                                 <div className="text-sm ml-2 mt-1 text-neutral-600">
-                                    <p className="font-semibold">🏆 CHAMPION</p>
-                                    <p>🏅 Best in UI/UX Design</p>
+                                    <p className="font-semibold">🏆 Most Outstanding Computer Science Student</p>
+                                    <p>🏆 Excellence in Information Technology Education Award, PSITE </p>
                                 </div>
                             </div>
                             <div>
@@ -169,6 +140,65 @@ export default function Page() {
                                 <div className="text-sm ml-2 mt-1 text-neutral-600">
                                     <p>🏅 Regional Finalist</p>
                                 </div>
+                            </div>
+                        </TextFade>
+                        <TextFade direction="up" className=" space-y-4 sm:space-y-8 col-span-2">
+                            <h4 className="gen-sans-bold text-3xl">Leadership Experience</h4>
+                            <div>
+                                <p className="font-semibold">Academic Affairs Head</p>
+                                <p className="text-xs sm:text-sm text-neutral-600">August 2024 - May 2025</p>
+                                <p className="italic">Computer Science Society - USLS</p>
+                                <div className="text-sm mt-1 ml-2 text-neutral-600">
+                                    <p>— Spearheaded a partnership with Datacamp, providing 50+ students with free data science courses</p>
+                                    <p>— Organized a mentorship program, training 30+ freshmen students with C++ programming</p>
+                                    <p>— Co-facilitated Game Jam Events; Re:Play & Let's G!!!</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p className="font-semibold">Student Mentor</p>
+                                <p className="text-xs sm:text-sm text-neutral-600">September 2024 - November 2024</p>
+                                <p className="italic">Computer Science Society - USLS</p>
+                                <div className="text-sm mt-1 ml-2 text-neutral-600">
+                                    <p>— Spearheaded a partnership with Datacamp, providing 50+ students with free data science courses</p>
+                                    <p>— Organized a mentorship program, training 30+ freshmen students with C++ programming</p>
+                                    <p>— Co-facilitated Game Jam Events; Re:Play & Let's G!!!</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p className="font-semibold">VP for Programs</p>
+                                <p className="text-xs sm:text-sm text-neutral-600">February 2024 - September 2024</p>
+                                <p className="italic">Developers Connect (DEVCON) Bacolod</p>
+                                <div className="text-sm mt-1 ml-2 text-neutral-600">
+                                    <p>— Co-organized a 2-day workshop on data science with SAP tools, reaching over 300+ students across 2 universities</p>
+                                    <p>— Led an outreach program in partnership with a local non-profit organization</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p className="font-semibold">Volunteer</p>
+                                <p className="text-xs sm:text-sm text-neutral-600">August 2023 - February 2024</p>
+                                <p className="italic">Developers Connect (DEVCON) Bacolod</p>
+                                {/* <div className="text-sm mt-1 ml-2 text-neutral-600">
+                                    <p>— Co-organized a 2-day workshop on data science with SAP tools, reaching over 300+ students across 2 universities</p>
+                                    <p>— Led an outreach program in partnership with a local non-profit organization</p>
+                                </div> */}
+                            </div>
+                            <div>
+                                <p className="font-semibold">Chief Information Officer</p>
+                                <p className="text-xs sm:text-sm text-neutral-600">August 2023 - May 2024</p>
+                                <p className="italic">Google Developer Student Clubs - USLS</p>
+                                <div className="text-sm mt-1 ml-2 text-neutral-600">
+                                    <p>— Co-facilitated a Datacamp partnership and managing scholars</p>
+                                    <p>— Awarded as Best Special Interest Club 2024 @ Corps de Elite USLS</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p className="font-semibold">2nd Year Batch Representative Assistant</p>
+                                <p className="text-xs sm:text-sm text-neutral-600">August 2022 - April 2023</p>
+                                <p className="italic">College of Engineering and Technology - USLS</p>
+                                {/* <div className="text-sm mt-1 ml-2 text-neutral-600">
+                                    <p>— Co-facilitated a Datacamp partnership and managing scholars</p>
+                                    <p>— Awarded as Best Special Interest Club 2024 @ Corps de Elite USLS</p>
+                                </div> */}
                             </div>
                         </TextFade>
 

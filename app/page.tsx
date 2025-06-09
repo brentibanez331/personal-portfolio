@@ -53,9 +53,9 @@ const fragmentShader = `
         
         vec2 pixelToMouseDirection = centerOfPixel - u_mouse;
         float pixelDistanceToMouse = length(pixelToMouseDirection);
-        float strength = smoothstep(0.3, 0.0, pixelDistanceToMouse);
+        float strength = smoothstep(0.3, 0.1, pixelDistanceToMouse);
  
-        vec2 uvOffset = strength * - mouseDirection * 0.3;
+        vec2 uvOffset = strength * - mouseDirection * 0.6;
         vec2 uv = vUv - uvOffset;
 
         vec4 color = texture2D(u_texture, uv);
@@ -230,7 +230,6 @@ export default function Page() {
           </div>
           <div className="a">
             calculating odds --- <span ref={percentRef}>0%</span>
-
           </div>
         </div>
       </div>
