@@ -182,7 +182,6 @@ export default function WorkSection() {
             <h2 className="gen-sans-bold text-9xl px-4">work experience</h2>
             <Separator className="mt-4 bg-neutral-800" />
             <div className="w-full relative" onMouseMove={handleMove}>
-                
                 {works.map((work, index) => (
                     <motion.div
                         key={index}

@@ -80,7 +80,6 @@ export default function Page() {
 
   useEffect(() => {
     const initializeClientSideLibraries = async () => {
-      // const THREE = await import('three')
       const Lenis = (await import('lenis')).default
 
       const lenis = new Lenis();
